@@ -7,70 +7,99 @@
         <meta name="description" content="Ryan Young is a web designer and front end developer in Des Moines, Iowa. Ryan currently works for Visionary Sevices as a Project Lead.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="js/typed.min.js"></script>
     </head>
     <body>
+    <svg style="display: none;">
+            <symbol id="twitter_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 16.8 13.7" enable-background="new 0 0 16.8 13.7" xml:space="preserve"><path d="M14.9 2.2c0.7-0.4 1.2-1.1 1.5-1.9 -0.7 0.4-1.4 0.7-2.2 0.8C13.5 0.4 12.7 0 11.7 0 9.7 0 8.2 1.5 8.2 3.4c0 0.3 0 0.5 0.1 0.8C5.4 4.1 2.9 2.7 1.2 0.6 0.9 1.1 0.7 1.7 0.7 2.3c0 1.2 0.6 2.3 1.5 2.9 -0.5 0-1.1-0.2-1.5-0.4v0c0 1.7 1.2 3.1 2.7 3.4C3.1 8.3 2.9 8.3 2.5 8.3c-0.2 0-0.4 0-0.6-0.1 0.4 1.4 1.7 2.4 3.2 2.4 -1.2 0.9-2.7 1.5-4.3 1.5 -0.3 0-0.6 0-0.8 0 1.5 1 3.3 1.5 5.3 1.5 6.3 0 9.8-5.2 9.8-9.8V3.4c0.7-0.5 1.2-1.1 1.7-1.8C16.2 1.9 15.6 2 14.9 2.2z"/></symbol>
+
+            <symbol id="linkedin_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 16.5 16.2" enable-background="new 0 0 16.5 16.2" xml:space="preserve"><path d="M1.8 3.5C0.7 3.5 0 2.7 0 1.8 0 0.8 0.7 0 1.9 0s1.8 0.8 1.9 1.8C3.7 2.7 3 3.5 1.8 3.5zM0.1 4.9h3.5v11.3H0.1V4.9zM5.6 4.9h3l0.2 1.6h0.1c0.4-0.7 1.6-1.8 3.5-1.8 2.3 0 4.1 1.5 4.1 4.9v6.7H13V10c0-1.5-0.5-2.5-1.8-2.5 -1 0-1.5 0.7-1.8 1.3C9.3 9 9.3 9.4 9.3 9.7v6.5H5.7V8.5C5.7 7.1 5.7 5.9 5.6 4.9z"/></symbol>
+
+            <symbol id="codepen_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve"><path d="M20 6.8C20 6.8 20 6.8 20 6.8c0-0.1 0-0.1 0-0.1 0 0 0 0 0 0 0 0 0 0 0-0.1 0 0 0 0 0 0 0 0 0 0 0-0.1 0 0 0 0 0 0 0 0 0 0 0-0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0l-9.1-6.1c-0.3-0.2-0.7-0.2-1 0L0.4 6.2c0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0.1 0 0.1V13c0 0 0 0.1 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0l9.1 6.1C9.7 20 9.8 20 10 20c0.2 0 0.3 0 0.5-0.1l9.1-6.1c0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0-0.1 0 0 0 0 0 0 0 0 0 0 0-0.1 0 0 0 0 0 0 0 0 0 0 0-0.1 0 0 0 0 0 0 0 0 0 0 0-0.1 0 0 0 0 0 0 0 0 0-0.1 0-0.1V7C20 6.9 20 6.9 20 6.8zM10.9 2.5L17.6 7l-3 2 -3.7-2.5V2.5zM9.1 2.5v4L5.4 9l-3-2L9.1 2.5zM1.7 8.6L3.9 10l-2.2 1.4V8.6zM9.1 17.5L2.4 13l3-2 3.7 2.5V17.5zM10 12l-3-2 3-2 3 2L10 12zM10.9 17.5v-4l3.7-2.5 3 2L10.9 17.5zM18.3 11.4L16.1 10l2.1-1.4V11.4z"/></symbol>
+
+            <symbol id="github_icon"version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 20.6 20.1" enable-background="new 0 0 20.6 20.1" xml:space="preserve"><path d="M13.5 20.1c-0.5 0.1-0.7-0.2-0.7-0.5 0-0.3 0-1.4 0-2.8 0-1-0.3-1.6-0.7-1.9 2.3-0.3 4.7-1.1 4.7-5.1 0-1.1-0.4-2-1.1-2.8 0.1-0.3 0.5-1.3-0.1-2.7 -0.9-0.3-2.8 1.1-2.8 1.1C12 5.1 11.2 5 10.3 5 9.4 5 8.5 5.1 7.7 5.3c0 0-2-1.3-2.8-1.1C4.3 5.7 4.7 6.7 4.8 7 4.1 7.7 3.7 8.6 3.7 9.8c0 3.9 2.4 4.8 4.7 5.1 -0.3 0.3-0.6 0.7-0.7 1.4 -0.6 0.3-2.1 0.7-3-0.9 -0.6-1-1.6-1.1-1.6-1.1 -1 0-0.1 0.6-0.1 0.6 0.7 0.3 1.1 1.5 1.1 1.5 0.6 1.8 3.5 1.2 3.5 1.2 0 0.9 0 1.7 0 1.9 0 0.3-0.2 0.6-0.7 0.5 -4.1-1.4-7-5.2-7-9.8C0 4.6 4.6 0 10.3 0 16 0 20.6 4.6 20.6 10.3 20.6 14.8 17.6 18.7 13.5 20.1z"/></symbol>
+
+            <symbol id="dribbble_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 16.8 16.8" enable-background="new 0 0 16.8 16.8" xml:space="preserve"><path d="M0 8.4C0 3.8 3.8 0 8.4 0c4.6 0 8.4 3.8 8.4 8.4 0 4.6-3.8 8.4-8.4 8.4C3.8 16.8 0 13.1 0 8.4zM9.2 8.4C9 8 8.8 7.5 8.6 7.1c-3.7 1.1-7.2 1-7.4 1 0 0.1 0 0.1 0 0.3 0 1.8 0.7 3.5 1.8 4.8 0 0 2-3.5 5.9-4.8C9 8.4 9.1 8.4 9.2 8.4zM5.3 1.9c-2 1-3.5 2.8-4 5C1.6 6.9 4.6 7 8 6 6.8 3.8 5.5 2 5.3 1.9zM3.8 13.9C4 14 4 14.1 4 14.1 4 14 3.9 14 3.8 13.9zM4 14.1c1.2 1 2.8 1.5 4.4 1.5 1 0 1.9-0.2 2.8-0.6 -0.1-0.6-0.5-2.8-1.5-5.5 0 0 0 0 0 0C5.4 11.1 4 14 4 14.1zM8.4 1.2c-0.6 0-1.1 0.1-1.7 0.2 0.1 0.1 1.5 1.9 2.7 4.2 2.7-1 3.7-2.6 3.8-2.6C11.9 1.9 10.2 1.2 8.4 1.2zM10.4 7.7c0.1 0.1 0.1 0.3 0.2 0.4 2.5-0.3 4.9 0.2 5 0.3 0-1.7-0.6-3.3-1.6-4.5 0 0-1.2 1.7-4 2.9C10.1 7 10.3 7.4 10.4 7.7zM12.4 14.3c1.6-1.1 2.7-2.8 3.1-4.8 -0.1-0.1-2.2-0.7-4.5-0.3C12 11.8 12.4 13.9 12.4 14.3z"/></symbol>
+
+            <symbol><svg id="email_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0" y="0" viewBox="0 0 16.4 16.4" enable-background="new 0 0 16.4 16.4" xml:space="preserve"><path d="M16.3 0.7l-2.3 14c0 0.2-0.1 0.3-0.3 0.4 -0.1 0-0.2 0.1-0.3 0.1 -0.1 0-0.1 0-0.2 0l-4.1-1.7 -2.2 2.7c-0.1 0.1-0.3 0.2-0.4 0.2 -0.1 0-0.1 0-0.2 0C6 16.2 5.8 16 5.8 15.8v-3.2l7.9-9.7L4 11.4 0.4 9.9C0.2 9.8 0 9.6 0 9.4 0 9.2 0.1 9 0.3 8.8l15.2-8.8C15.6 0 15.7 0 15.8 0c0.1 0 0.2 0 0.3 0.1C16.3 0.2 16.4 0.5 16.3 0.7z"/></svg></path></symbol>
+    </svg>
         <main>
-            <h1>I'm Ryan Young</h1>
-            <span class="js-typed_titles"></span>
-            <div class="personal_titles">
-                <span>Web Designer</span>
-                <span>Front End Developer</span>
-                <span>Accessibility Advocate</span>
-                <span>Content Nerd</span>
-                <span>Blogger</span>
-                <span>Coffee Drinker</span>
-                <span>Amateur Cocktail Maker</span>
-            </div>
-            <p>I live in Des Moines with my wife and dog. Since 2014, I've been a part of a stellar team at Visionary Services designing and building business websites and web applications for a wide range of clients. In the office, I am part designer, part front end developer, and part project manager. Specifically, I focus on bettering the user experience, accessibility, and performance in the sites we build.</p>
-            <p>I started learning about HTML and CSS on my own and have been blessed to work with many smart and talented people who have helped me progress over the years. In my free time, I like to go to the gym, spend time with family, and dabble with new programming languages. I am also learning how to play the guitar.</p>
-            
-            <h2>Blog Posts</h2>
-            <p>Every once in a while I publish tutorials and articles on the Visionary Services blog. Here are some I hope you find interesting.</p>
-            <ul class="article_list">
-                <li>
-                    <a href="http://www.visionary.com/web-design-news/making-an-animated-svg-checkbox.html" target="_blank">Making an Animated SVG Checkbox</a>
-                </li>
-                <li>
-                    <a href="http://www.visionary.com/web-design-news/treat-seo-like-a-client-referral.html" target="_blank">Treat SEO Like a Client Referral: Earn It</a>
-                </li>
-                <li>
-                    <a href="http://www.visionary.com/web-design-news/design-is-problem-solving.html" target="_blank">Design is Problem Solving</a>
-                </li>
-                <li>
-                    <a href="http://www.visionary.com/web-design-news/reconsidering-image-carousels.html" target="_blank">Reconsidering Image Carousels</a>
-                </li>
-                <li>
-                    <a href="http://www.visionary.com/web-design-news/three-things-from-the-internship.html" target="_blank">Three things I learned from 'The Internship'</a>
-                </li>
-            </ul>
+            <section class="bio_section">
+                <h1>I'm Ryan Young</h1>
+                <span class="js-typed_titles"></span>
+                <div class="personal_titles">
+                    <span>Web Designer</span>
+                    <span>Front End Developer</span>
+                    <span>Accessibility Advocate</span>
+                    <span>Content Nerd</span>
+                    <span>Blogger</span>
+                    <span>Coffee Drinker</span>
+                    <span>Amateur Cocktail Maker</span>
+                    <span>End of Transmission</span>
+                </div>
+                <p>I live in Des Moines with my wife and dog. Since 2014, I've been a part of a stellar team at Visionary Services designing and building business websites and web applications for a wide range of clients. In the office, I am part designer, part front end developer, and part project manager. Specifically, I focus on bettering the user experience, accessibility, and performance in the sites we build.</p>
+                <p>I started learning about HTML and CSS on my own and have been blessed to work with many smart and talented people who have helped me progress over the years. In my free time, I like to go to the gym, spend time with family, and dabble with new programming languages. I am also learning how to play the guitar.</p>
 
-            <ul class="social_media">
-                <li>
-                    <a href="#">Email</a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/in/rcyou" target="_blank">LinkedIn</a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/rcyou" target="_blank">Twitter</a>
-                </li>
-                <li>
-                    <a href="https://codepen.io/rcyou" target="_blank">CodePen</a>
-                </li>
-                <li>
-                    <a href="https://github.com/rcyou" target="_blank">GitHub</a>
-                </li>
-                <li>
-                    <a href="https://dribbble.com/rcyou" target="_blank">Dribbble</a>
-                </li>
-            </ul>
-
+                <ul class="social_media">
+                    <li>
+                        <a href="#">
+                            <svg><use xlink:href="#email_icon"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/rcyou" target="_blank">
+                            <svg><use xlink:href="#linkedin_icon"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/rcyou" target="_blank">
+                            <svg><use xlink:href="#twitter_icon"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://codepen.io/rcyou" target="_blank">
+                            <svg><use xlink:href="#codepen_icon"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rcyou" target="_blank">
+                            <svg><use xlink:href="#github_icon"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://dribbble.com/rcyou" target="_blank">
+                            <svg><use xlink:href="#dribbble_icon"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <aside class="auxiliary">
+                <h2>Blog Posts</h2>
+                <p>Every once in a while I publish tutorials and articles on the Visionary Services blog. Here are some I hope you find interesting.</p>
+                <ul class="article_list">
+                    <li>
+                        <a href="http://www.visionary.com/web-design-news/making-an-animated-svg-checkbox.html" target="_blank">Making an Animated SVG Checkbox</a>
+                    </li>
+                    <li>
+                        <a href="http://www.visionary.com/web-design-news/treat-seo-like-a-client-referral.html" target="_blank">Treat SEO Like a Client Referral: Earn It</a>
+                    </li>
+                    <li>
+                        <a href="http://www.visionary.com/web-design-news/design-is-problem-solving.html" target="_blank">Design is Problem Solving</a>
+                    </li>
+                    <li>
+                        <a href="http://www.visionary.com/web-design-news/reconsidering-image-carousels.html" target="_blank">Reconsidering Image Carousels</a>
+                    </li>
+                    <li>
+                        <a href="http://www.visionary.com/web-design-news/three-things-from-the-internship.html" target="_blank">Three things I learned from 'The Internship'</a>
+                    </li>
+                </ul>
+            </aside>
         </main>       
     </body>
     <script>
@@ -79,10 +108,10 @@
             stringsElement: $('.personal_titles'),
             loop: true,
             loopCount: false, //infinite
-            startDelay: 2000,
+            startDelay: 5000,
             typeSpeed: 50,
-            backDelay: 1000,
-            backSpeed: 100
+            backDelay: 2000,
+            backSpeed: 75
           });
       });
     </script>

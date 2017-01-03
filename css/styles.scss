@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* ==========================================================================
+ CSS Reset
+ ========================================================================== */
+abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:0 0}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;margin:1em 0;padding:0;border:0;border-top:1px solid #ccc}
+button,input,select,textarea{margin:0;outline:0!important}
+button,input,select{vertical-align:middle}
+
+/* ==========================================================================
+ Global Styling
+ ========================================================================== */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	height: 100%;
+	min-height: 100%;
+	font-size: 1.8rem;
+	font-family: 'Oxygen', sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color: #fff;
+	background-color: dodgerblue;
+
+	/* smooths type in all browsers */
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+img {
+	border: 0;
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: #143EF3;
+	transition: all 250ms ease-in-out;
+}
+
+a:hover, a:focus { color: #960867; }
+
+h1, h2, h3 {
+	margin: 0 0 1.5rem 0;
+	padding: 0;
+	line-height: 1.125;
+}
+
+h1 { font-size: 4.2rem; }
+h2 { font-size: 3.8rem; }
+h3 { font-size: 3.2rem; }
+
+h4 {
+	font-size: 2.25rem;
+	line-height: 1.25;
+}
+
+h5 { font-size: 2rem; }
+h6 { font-size: 2rem; }
+
+
+sup, sub { font-size: 0.7rem; }
+
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
+
+b, strong {
+	font-weight: bold;
+	font-weight: 600;
+}
+
+i, em { font-style: italic; }
+
+hr {
+	width: 100%;
+	height: 1px;
+	border: 0;
+	background-color: #DDD;
+}
+
+svg {
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	display: block;
+}
+
+/* ==========================================================================
+ Container
+ ========================================================================== */
+
+.container {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 1.5rem;
+	max-width: 800px;
+}
+
+/* ==========================================================================
+ Main Content Styling
+ ========================================================================== */
+.bio_section,
+.auxiliary {
+	padding: 3rem 1.5rem;
+}
+
+main ol,
+main ul {
+	margin: 0;
+	padding: 0 0 0 2rem;
+
+	li {
+		margin-bottom: 1.5rem;
+	}
+}
+
+main p { margin: 1.5rem 0; }
+
+.social_media {
+	display: flex;
+	list-style: none;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		margin: 0 1rem 0 0;
+	}
+	
+	a {
+		display: block;
+		height: 2rem;
+    	width: 2rem;
+
+    	svg, path { fill: #FFF; }
+	}
+}
+
+/* ==========================================================================
+Typing Titles
+ ========================================================================== */
+.js-typed_titles,
+.typed-cursor {
+	font-size: 2.8rem;
+	display: inline-block;
+    vertical-align: middle;
+    font-weight: 300;
+}
+
+.js-typed_titles { line-height: 1.125; }
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* ==========================================================================
+Viewport Larger Than 800 pixels)
+========================================================================== */
+@media all and (min-width:800px) {
+	body { display: flex; }
+
+	body:before {
+		content: "";
+		display: block;
+	}
+
+	body:before, main { width: 50%; }
+}
