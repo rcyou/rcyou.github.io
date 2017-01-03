@@ -38,6 +38,10 @@ body {
 	font-weight: 400;
 	color: #fff;
 	background-color: dodgerblue;
+	background-image: url('../ryan_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 
 	/* smooths type in all browsers */
 	-webkit-font-smoothing: subpixel-antialiased;
