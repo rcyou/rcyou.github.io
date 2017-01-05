@@ -107,16 +107,6 @@ img {
   max-width: 100%;
 }
 
-a {
-  color: blue;
-  -webkit-transition: all 250ms ease-in-out;
-          transition: all 250ms ease-in-out;
-}
-
-a:hover, a:focus {
-  color: orange;
-}
-
 h1, h2, h3 {
   margin: 0 0 1.5rem 0;
   padding: 0;
@@ -265,7 +255,14 @@ main p {
 
 main a {
   text-decoration: none;
-  border-bottom: 1px dotted blue;
+  border-bottom: 1px dotted #ce3209;
+  color: #ce3209;
+  -webkit-transition: all 250ms ease-in-out;
+          transition: all 250ms ease-in-out;
+}
+main a:hover, main a:focus {
+  color: #00c;
+  border-bottom-color: #00c;
 }
 
 /* ==========================================================================
