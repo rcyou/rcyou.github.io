@@ -26,26 +26,30 @@ button,input,select{vertical-align:middle}
 
 html {
 	height: 100%;
+	height: 100vh;
 	font-size: 62.5%;
 }
 
 body {
 	min-height: 100%;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-family: 'Libre Franklin', sans-serif;
 	line-height: 1.625;
 	font-weight: 500;
 	color: #222;
-	background-image: url('../ryan-two-edit.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: 8% top;
 
 	/* smooths type in all browsers */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+	@media all and (min-width:800px) {
+		background-attachment: fixed;
+		background-image: url('../ryan-two-edit.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left top;
+	}
 }
 
 img {
@@ -127,10 +131,26 @@ svg {
 	padding: 3rem 1.5rem;
 }
 
+.bio_section { margin-top: 25rem; }
+
 main {
-	margin-top: 35rem;
-	background: rgba(255,255,255,0.80);
-	text-shadow: 1px 1px 3px rgba(255,255,255,0.50);
+	background: rgba(255,255,255,0.5);
+	box-shadow: -1px 0px 3rem rgba(0,0,0,0.25);
+
+	&:before {
+		content: "";
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		background-image: url('../ryan-two-edit.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left top;
+		z-index: -1;
+	}
 }
 
 main ol,
@@ -226,7 +246,17 @@ Viewport Larger Than 800 pixels)
 	body:before, main { width: 50%; }
 
 	main {
+		color: #222;
 		margin: 0;
-		background: transparent;
+		background: rgba(255,255,255,0.25);
+		box-shadow: none;
+
+		&:before { content: none; }
+	}
+
+	.bio_section,
+	.auxiliary {
+		padding: 3rem;
+		margin: 0;
 	}
 }
