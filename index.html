@@ -7,13 +7,14 @@
         <meta name="description" content="Ryan Young is a web designer and front end developer in Des Moines, Iowa. Ryan currently works for Visionary Sevices as a Project Lead.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:500,800" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:200,800" rel="stylesheet">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/styles.css">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="js/typed.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
     <svg style="display: none;">
@@ -31,7 +32,7 @@
     </svg>
         <main>
             <section class="bio_section">
-                <h1>I'm Ryan Young</h1>
+                <h1>I’m Ryan Young</h1>
                 <span class="js-typed_titles"></span>
                 <div class="personal_titles">
                     <span>Web Designer</span>
@@ -43,8 +44,8 @@
                     <span>Amateur Cocktail Maker</span>
                     <span>End of Transmission</span>
                 </div>
-                <p>I live in Des Moines with my wife and dog. Since 2014, I've been a part of a stellar team at <a href="http://visionary.com" target="_blank">Visionary Services</a> designing and building business websites and web applications for a wide range of clients. Specifically, I focus on bettering the user experience, accessibility, and performance of the sites we build.</p>
-                <p>One the first Monday of each month, you can find me at <a href="https://dsmfrontend.github.io/" target="_blank">Des Moines Front End</a>, a meetup group I co-organize.</p>
+                <p>I live in Des Moines with my wife and dog. Since 2014, I've been a part of a stellar team at <a class="outbound" href="http://visionary.com" target="_blank">Visionary Services</a> designing and building business websites and web applications for a wide range of clients. Specifically, I focus on bettering the user experience, accessibility, and performance of the sites we build.</p>
+                <p>One the first Monday of each month, you can find me at <a class="outbound" href="https://dsmfrontend.github.io/" target="_blank">Des Moines Front End</a>, a meetup group I co-organize.</p>
                 <p>In my free time, I like to go to the gym, spend time with family, and dabble with new programming languages. I am also learning how to play the guitar.</p>
 
                 <ul class="social_media">
@@ -54,27 +55,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://linkedin.com/in/rcyou" target="_blank">
+                        <a class="outbound" data-platform="linkedin" href="https://linkedin.com/in/rcyou" target="_blank">
                             <svg><use xlink:href="#linkedin_icon"></use></svg>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/rcyou" target="_blank">
+                        <a class="outbound" data-platform="twitter" href="https://twitter.com/rcyou" target="_blank">
                             <svg><use xlink:href="#twitter_icon"></use></svg>
                         </a>
                     </li>
                     <li>
-                        <a href="https://codepen.io/rcyou" target="_blank">
+                        <a class="outbound" data-platform="codepen" href="https://codepen.io/rcyou" target="_blank">
                             <svg><use xlink:href="#codepen_icon"></use></svg>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/rcyou" target="_blank">
+                        <a class="outbound" data-platform="github" href="https://github.com/rcyou" target="_blank">
                             <svg><use xlink:href="#github_icon"></use></svg>
                         </a>
                     </li>
                     <li>
-                        <a href="https://dribbble.com/rcyou" target="_blank">
+                        <a class="outbound" data-platform="dribbble" href="https://dribbble.com/rcyou" target="_blank">
                             <svg><use xlink:href="#dribbble_icon"></use></svg>
                         </a>
                     </li>
@@ -85,35 +86,32 @@
                 <p>Every once in a while I publish tutorials and articles on the Visionary Services blog. Here are some I hope you find interesting.</p>
                 <ul class="article_list">
                     <li>
-                        <a href="http://www.visionary.com/web-design-news/making-an-animated-svg-checkbox.html" target="_blank">Making an Animated SVG Checkbox</a>
+                        <a class="outbound" href="http://www.visionary.com/web-design-news/making-an-animated-svg-checkbox.html" target="_blank">Making an Animated SVG Checkbox</a>
                     </li>
                     <li>
-                        <a href="http://www.visionary.com/web-design-news/treat-seo-like-a-client-referral.html" target="_blank">Treat SEO Like a Client Referral: Earn It</a>
+                        <a class="outbound" href="http://www.visionary.com/web-design-news/treat-seo-like-a-client-referral.html" target="_blank">Treat SEO Like a Client Referral: Earn It</a>
                     </li>
                     <li>
-                        <a href="http://www.visionary.com/web-design-news/design-is-problem-solving.html" target="_blank">Design is Problem Solving</a>
+                        <a class="outbound" href="http://www.visionary.com/web-design-news/design-is-problem-solving.html" target="_blank">Design is Problem Solving</a>
                     </li>
                     <li>
-                        <a href="http://www.visionary.com/web-design-news/reconsidering-image-carousels.html" target="_blank">Reconsidering Image Carousels</a>
+                        <a class="outbound" href="http://www.visionary.com/web-design-news/reconsidering-image-carousels.html" target="_blank">Reconsidering Image Carousels</a>
                     </li>
                     <li>
-                        <a href="http://www.visionary.com/web-design-news/three-things-from-the-internship.html" target="_blank">Three things I learned from 'The Internship'</a>
+                        <a class="outbound" href="http://www.visionary.com/web-design-news/three-things-from-the-internship.html" target="_blank">Three things I learned from ‘The Internship’</a>
                     </li>
                 </ul>
             </aside>
-        </main>       
+        </main>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-65277645-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>     
     </body>
-    <script>
-      $(function(){
-          $(".js-typed_titles").typed({
-            stringsElement: $('.personal_titles'),
-            loop: true,
-            loopCount: false, //infinite
-            startDelay: 5000,
-            typeSpeed: 50,
-            backDelay: 2000,
-            backSpeed: 75
-          });
-      });
-    </script>
 </html>

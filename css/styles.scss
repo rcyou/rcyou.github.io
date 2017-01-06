@@ -33,9 +33,9 @@ html {
 body {
 	min-height: 100%;
 	font-size: 1.6rem;
-	font-family: 'Libre Franklin', sans-serif;
+	font-family: Georgia, sans-serif;
 	line-height: 1.625;
-	font-weight: 500;
+	font-weight: 400;
 	color: #222;
 
 	/* smooths type in all browsers */
@@ -59,15 +59,17 @@ img {
 }
 
 h1, h2, h3 {
-	margin: 0 0 1.5rem 0;
+	font-family: 'Libre Franklin', sans-serif;
+	margin: 0 0 0.5rem 0;
 	padding: 0;
 	line-height: 1.125;
 	font-weight: 800;
 }
 
-h1 { font-size: 4.3rem; }
-h2 { font-size: 3.8rem; }
-h3 { font-size: 3.2rem; }
+h1 { font-size: 3.8rem; }
+
+h2 { font-size: 3.2rem; }
+h3 { font-size: 2.8rem; }
 
 h4 {
 	font-size: 2.25rem;
@@ -103,6 +105,18 @@ svg {
 	max-height: 100%;
 	height: auto;
 	display: block;
+}
+
+/* WebKit/Blink Browsers */
+::selection {
+  background: rgba(20, 170, 250, 0.75);
+  color: #fff;
+}
+
+/* Gecko Browsers */
+::-moz-selection {
+  background: rgba(0,0,255,0.5);
+  color: #fff;
 }
 
 /* ==========================================================================
@@ -156,26 +170,84 @@ main ul {
 	}
 }
 
-main p { margin: 1.5rem 0; }
+main p { margin: 1rem 0 2rem 0; }
 
 .social_media {
-	display: flex;
+	// display: flex;
 	list-style: none;
 	padding: 0;
+	line-height: 1;
 
 	li {
 		display: inline-block;
+		height: 2rem;
+    	width: 2rem;
+		vertical-align: baseline;
 		margin: 0 1rem 0 0;
 	}
 	
 	a {
 		display: block;
-		height: 2rem;
-    	width: 2rem;
     	text-decoration: none;
     	border: none;
+		height: 100%;
+    	width: 100%;
+    	position: relative;
 
-    	svg, path { fill: #222; }
+    	svg, path {
+    		fill: #222;
+    		transition: all 150ms linear;
+    	}
+
+    	// not sure about this
+    	//
+    	// &:after {
+    	// 	content: "";
+    	// 	display: block;
+    	// 	width: 3.5rem;
+    	// 	height: 3.5rem;
+    	// 	border-radius: 100%;
+    	// 	position: absolute;
+    	// 	top: 50%;
+    	// 	left: 50%;
+    	// 	transform: translate(-50%,-50%);
+    	// 	z-index: -1;
+    	// }
+
+    	&:hover,
+    	&:focus {
+    		transform: scale(1.25);
+    	}
+
+    	// linkedin
+    	&[data-platform="linkedin"]:hover,
+    	&[data-platform="linkedin"]:focus {
+    		svg, path { fill: #0077b5; }
+    	}
+
+    	// twitter
+    	&[data-platform="twitter"]:hover,
+    	&[data-platform="twitter"]:focus {
+    		svg, path { fill: #1da1f2; }
+    	}
+
+    	// codepen
+    	&[data-platform="codepen"]:hover,
+    	&[data-platform="codepen"]:focus {
+    		svg, path { fill: #777; }
+    	}
+
+    	// github
+    	&[data-platform="github"]:hover,
+    	&[data-platform="github"]:focus {
+    		svg, path { fill: #6e5494; }
+    	}
+
+    	// dribbble
+    	&[data-platform="dribbble"]:hover,
+    	&[data-platform="dribbble"]:focus {
+    		svg, path { fill: #ea4c89; }
+    	}
 	}
 }
 
@@ -184,7 +256,6 @@ main a {
 	border-bottom: 1px dotted #ce3209;
 	color: #ce3209;
 	transition: all 250ms ease-in-out;
-
 	&:hover, &:focus {
 		color: #00c;
 		border-bottom-color: #00c;
@@ -199,7 +270,8 @@ Typing Titles
 	font-size: 2.8rem;
 	display: inline-block;
     vertical-align: middle;
-    font-weight: 300;
+    font-weight: 200;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 .js-typed_titles { line-height: 1.125; }
