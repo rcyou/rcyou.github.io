@@ -24,7 +24,15 @@ function trackOutboundLink() {
     });
 }
 
+// add a class to the SVG illustration to trigger a wink
+function wink_animation() {
+  setInterval(function(){
+      $("#illustration").toggleClass('winky_face');
+  }, 5000);
+}
+
 $(document).ready(function() {
   typed();
   trackOutboundLink();
+  wink_animation();
 });
