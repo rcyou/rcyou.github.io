@@ -32,24 +32,17 @@ html {
 
 body {
 	min-height: 100%;
-	font-size: 1.6rem;
-	font-family: Georgia, sans-serif;
+	font-size: 2.4rem;
+	font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
 	line-height: 1.625;
 	font-weight: 400;
-	color: #222;
+	background-color: #085ad5;
+	color: #EEE;
 
 	/* smooths type in all browsers */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-
-	@media all and (min-width:800px) {
-		background-attachment: fixed;
-		background-image: url('../ryan-two-edit.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: left top;
-	}
 }
 
 img {
@@ -66,9 +59,12 @@ h1, h2, h3 {
 	font-weight: 800;
 }
 
-h1 { font-size: 3.8rem; }
+h1 {
+	font-size: 4.8rem;
+	margin-top: 2rem;
+}
 
-h2 { font-size: 3.2rem; }
+h2 { font-size: 3.6rem; }
 h3 { font-size: 2.8rem; }
 
 h4 {
@@ -133,31 +129,23 @@ svg {
 /* ==========================================================================
  Main Content Styling
  ========================================================================== */
-.bio_section,
-.auxiliary {
-	padding: 3rem 1.5rem;
+#illustration {
+	width: 10rem;
+	display: block;
+	margin: 0 auto;
+
+	ellipse, path { fill: rgba(0,0,0,0.5); }
+
+	#wink_1 { opacity: 0; }
 }
 
-.bio_section { margin-top: 25rem; }
+h1, .js-typed_titles { text-align: center; }
 
-main {
-	background: rgba(255,255,255,0.5);
-	box-shadow: -1px 0px 3rem rgba(0,0,0,0.25);
+main section {
+	padding: 2rem;
+	overflow: hidden; //because the p's are floated on mobile
 
-	&:before {
-		content: "";
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100vh;
-		width: 100%;
-		background-image: url('../ryan-two-edit.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: left top;
-		z-index: -1;
-	}
+	&:not(:first-of-type) { margin-top: 1.5rem; }
 }
 
 main ol,
@@ -170,20 +158,26 @@ main ul {
 	}
 }
 
-main p { margin: 1rem 0 2rem 0; }
+main p {
+	margin: 1rem 0 2rem 0;
+	float: left;
+	width: 100%;
+}
 
 .social_media {
-	// display: flex;
+	display: flex;
+	justify-content: center;
 	list-style: none;
 	padding: 0;
 	line-height: 1;
+	background-color: rgba(0,0,0,0.5);
 
 	li {
 		display: inline-block;
-		height: 2rem;
-    	width: 2rem;
+		height: 5rem;
+    	width: 5rem;
 		vertical-align: baseline;
-		margin: 0 1rem 0 0;
+		margin: 0;
 	}
 	
 	a {
@@ -192,86 +186,82 @@ main p { margin: 1rem 0 2rem 0; }
     	border: none;
 		height: 100%;
     	width: 100%;
+    	padding: 1.5rem;
     	position: relative;
 
     	svg, path {
-    		fill: #222;
+    		fill: #EEE;
     		transition: all 150ms linear;
-    	}
-
-    	// not sure about this
-    	//
-    	// &:after {
-    	// 	content: "";
-    	// 	display: block;
-    	// 	width: 3.5rem;
-    	// 	height: 3.5rem;
-    	// 	border-radius: 100%;
-    	// 	position: absolute;
-    	// 	top: 50%;
-    	// 	left: 50%;
-    	// 	transform: translate(-50%,-50%);
-    	// 	z-index: -1;
-    	// }
-
-    	&:hover,
-    	&:focus {
-    		transform: scale(1.25);
     	}
 
     	// linkedin
     	&[data-platform="linkedin"]:hover,
     	&[data-platform="linkedin"]:focus {
-    		svg, path { fill: #0077b5; }
+    		background-color: #0077b5;
     	}
 
     	// twitter
     	&[data-platform="twitter"]:hover,
     	&[data-platform="twitter"]:focus {
-    		svg, path { fill: #1da1f2; }
+    		background-color: #1da1f2;
     	}
 
     	// codepen
     	&[data-platform="codepen"]:hover,
     	&[data-platform="codepen"]:focus {
-    		svg, path { fill: #777; }
+    		background-color: #222;
     	}
 
     	// github
     	&[data-platform="github"]:hover,
     	&[data-platform="github"]:focus {
-    		svg, path { fill: #6e5494; }
+    		background-color: #111;
     	}
 
     	// dribbble
     	&[data-platform="dribbble"]:hover,
     	&[data-platform="dribbble"]:focus {
-    		svg, path { fill: #ea4c89; }
+    		background-color: #ea4c89;
+    	}
+
+    	// pinterest
+    	&[data-platform="pinterest"]:hover,
+    	&[data-platform="pinterest"]:focus {
+    		background-color: #bd081c;
+    	}
+
+    	// email link
+    	&[data-platform="email"]:hover,
+    	&[data-platform="email"]:focus {
+    		background-color: #ecb731;
     	}
 	}
 }
 
 main a {
 	text-decoration: none;
-	border-bottom: 1px dotted #ce3209;
-	color: #ce3209;
+	color: #E5EA2A;
+	font-weight: 700;
+	border-bottom: 1px dotted transparent;
 	transition: all 250ms ease-in-out;
+
 	&:hover, &:focus {
-		color: #00c;
-		border-bottom-color: #00c;
+		color: #fff;
+		border-color: #fff;
 	}
 }
+
 
 /* ==========================================================================
 Typing Titles
  ========================================================================== */
 .js-typed_titles,
 .typed-cursor {
-	font-size: 2.8rem;
+	font-size: 3rem;
 	display: inline-block;
     vertical-align: middle;
-    font-weight: 200;
-    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+ 	font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
 }
 
 .js-typed_titles { line-height: 1.125; }
@@ -302,33 +292,148 @@ Typing Titles
 }
 
 /* ==========================================================================
-Viewport Larger Than 800 pixels)
+Viewport Larger Than 550 pixels)
 ========================================================================== */
-@media all and (min-width:800px) {
-	body {
-		display: flex;
-		background-position: left top;
+@media all and (min-width: 550px) {
+	#illustration {
+		float: left;
+		margin: 0 2rem 0 0;
 	}
 
-	body:before {
-		content: "";
-		display: block;
+	h1, .js-typed_titles { text-align: left; }
+
+	.social_media {
+		li {
+			height: 6rem;
+			width: 6rem;
+		}
 	}
 
-	body:before, main { width: 50%; }
+	.bio_section p:first-of-type { margin-top: 2rem; }	
+}
 
-	main {
-		color: #222;
-		margin: 0;
-		background: rgba(255,255,255,0.25);
-		box-shadow: none;
+/* ==========================================================================
+Viewport Larger Than 960 pixels)
+========================================================================== */
+@media all and (min-width: 960px) {
 
-		&:before { content: none; }
+	.js-typed_titles,
+	.typed-cursor { font-size: 3.8rem; }
+
+	main { padding-top: 4rem; }
+
+	.social_media {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 6rem;
+
+		li {
+			a { padding: 1.75rem; }
+		}
 	}
 
-	.bio_section,
-	.auxiliary {
-		padding: 3rem;
-		margin: 0;
+	#illustration {
+		transition: transform 300ms ease-in-out;
+		width: 40rem;
+		float: right;
+		-moz-transform: scaleX(-1);
+	    -o-transform: scaleX(-1);
+	    -webkit-transform: scaleX(-1);
+	    transform: scaleX(-1);
+	    filter: FlipH;
+	    -ms-filter: "FlipH";
 	}
+
+	main section {
+		padding-left: 10rem;
+		padding-right: 3rem;
+		overflow: visible;
+	}
+
+	main p { float: none; }
+
+	.bio_section p:first-of-type { margin-top: 1rem; }
+
+	/* ==========================================================================
+	Wink Animation -- Only happens on screens larger than 960px
+	 ========================================================================== */
+	// nod the whole head
+	@keyframes nod_animate {
+	    0% { transform: rotate(0deg) scaleX(-1); }
+	    50% { transform: rotate(-7deg) scaleX(-1); }
+	    100% { transform: rotate(0deg) scaleX(-1); }
+	}
+
+	@-webkit-keyframes nod_animate {
+	    0% { transform: rotate(0deg) scaleX(-1); }
+	    50% { transform: rotate(-7deg) scaleX(-1); }
+	    100% { transform: rotate(0deg) scaleX(-1); }
+	}
+
+	@-moz-keyframes nod_animate {
+	    0% { transform: rotate(0deg) scaleX(-1); }
+	    50% { transform: rotate(-7deg) scaleX(-1); }
+	    100% { transform: rotate(0deg) scaleX(-1); }
+	}
+	
+	// toggle eye visibility
+	@keyframes eye_animate {
+	    0% { opacity: 1; }
+	    50% { opacity: 0; }
+	    100% { opacity: 1; }
+	}
+
+	@-webkit-keyframes eye_animate {
+	    0% { opacity: 1; }
+	    50% { opacity: 0; }
+	    100% { opacity: 1; }
+	}
+
+	@-moz-keyframes eye_animate {
+	    0% { opacity: 1; }
+	    50% { opacity: 0; }
+	    100% { opacity: 1; }
+	}
+
+	// toggle eyelid visibility
+	@keyframes wink_animate {
+	    0% { opacity: 0; }
+	    60% { opacity: 1; }
+	    100% { opacity: 0; }
+	}
+
+	@-webkit-keyframes wink_animate {
+	    0% { opacity: 0; }
+	    60% { opacity: 1; }
+	    100% { opacity: 0; }
+	}
+
+	@-moz-keyframes wink_animate {
+	    0% { opacity: 0; }
+	    60% { opacity: 1; }
+	    100% { opacity: 0; }
+	}
+
+	 #illustration.winky_face {
+		-webkit-animation: nod_animate 1000ms ease-in-out 1;
+		-moz-animation: nod_animate 1000ms ease-in-out 1;
+		animation: nod_animate 1000ms ease-in-out 1;
+
+		#eye_1 {
+			-webkit-animation: eye_animate 750ms 1;
+			-moz-animation: eye_animate 750ms 1;
+			animation: eye_animate 750ms 1;
+		}
+
+		#wink_1 {
+			-webkit-animation: wink_animate 500ms 1;
+			-moz-animation: wink_animate 500ms 1;
+			animation: wink_animate 500ms 1;
+		}
+	 }
 }
