@@ -185,15 +185,13 @@ main section {
 main ol,
 main ul {
   margin: 0;
-  padding: 0 0 0 3rem; }
+  padding: 0 0 0 4rem; }
   main ol li,
   main ul li {
     margin-bottom: 1.5rem; }
 
 main p {
-  margin: 1rem 0 2rem 0;
-  float: left;
-  width: 100%; }
+  margin: 1rem 0 2rem 0; }
 
 .social_media {
   display: -webkit-box;
@@ -251,6 +249,17 @@ main a {
   main a:hover, main a:focus {
     color: #fff;
     border-color: #fff; }
+
+.blog_posts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 /* ==========================================================================
 Typing Titles
