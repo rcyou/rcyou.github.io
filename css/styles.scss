@@ -151,18 +151,12 @@ main section {
 main ol,
 main ul {
 	margin: 0;
-	padding: 0 0 0 3rem;
+	padding: 0 0 0 4rem;
 
-	li {
-		margin-bottom: 1.5rem;
-	}
+	li { margin-bottom: 1.5rem; }
 }
 
-main p {
-	margin: 1rem 0 2rem 0;
-	float: left;
-	width: 100%;
-}
+main p { margin: 1rem 0 2rem 0; }
 
 .social_media {
 	display: flex;
@@ -249,6 +243,11 @@ main a {
 		color: #fff;
 		border-color: #fff;
 	}
+}
+
+.blog_posts {
+	display: flex;
+	flex-direction: column;
 }
 
 
