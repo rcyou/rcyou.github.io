@@ -154,6 +154,8 @@ svg {
 section {
   height: 100vh;
   width: 100vw;
+  position: relative;
+  z-index: 2;
   flex: 1 0 100vw;
   padding: 3rem;
   scroll-snap-coordinate: 50% 50%;

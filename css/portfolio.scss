@@ -128,6 +128,8 @@ svg {
 section {
 	height: $height;
 	width: $width;
+	position: relative;
+	z-index: 2;
 	flex: 1 0 $width;
 	padding: 3rem;
 	scroll-snap-coordinate: 50% 50%;
