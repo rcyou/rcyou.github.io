@@ -1,0 +1,14 @@
+{
+	"ignores": ["*.css", "*.js", "*.less"],
+	"options": {
+		"outputStyle": "compressed",
+		"lineComments": false,
+		"debugInfo": false,
+		"sourceMap": false,
+		"unixNewlines": false,
+        "autoprefix": true
+	},
+	"customOptions": [],
+	"includePaths": [],
+	"requireLibs": []
+}
