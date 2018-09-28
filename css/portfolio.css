@@ -75,21 +75,7 @@ body {
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-destination: 50% 50%;
-  scroll-snap-points-x: repeat(100vw);
-  scroll-snap-type: mandatory;
-  scroll-snap-type: x mandatory; }
-  @media all and (min-width: 800px) {
-    body {
-      flex-direction: column;
-      overflow-x: hidden;
-      overflow-y: auto;
-      scroll-snap-points-y: repeat(100vh);
-      scroll-snap-type: y mandatory; } }
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
 
 img {
   border: 0;
@@ -150,6 +136,22 @@ svg {
   max-height: 100%;
   height: auto;
   display: block; }
+
+main {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-destination: 50% 50%;
+  scroll-snap-points-x: repeat(100vw);
+  scroll-snap-type: mandatory;
+  scroll-snap-type: x mandatory; }
+  @media all and (min-width: 800px) {
+    main {
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scroll-snap-points-y: repeat(100vh);
+      scroll-snap-type: y mandatory; } }
 
 section {
   height: 100vh;

@@ -45,27 +45,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-
-	display: flex;
-		
-	//css snap point magic
-	overflow-x: auto;
-	overflow-y: hidden;
-	scroll-snap-destination: 50% 50%;
-	scroll-snap-points-x: repeat($width);
-	scroll-snap-type: mandatory;
-	//for chrome 69+
-	scroll-snap-type: x mandatory;
-
-	@media all and (min-width: 800px) {
-		flex-direction: column;
-		 //css snap point magic
-		overflow-x: hidden;
-		overflow-y: auto;
-		scroll-snap-points-y: repeat($height);
-		//for chrome 69+
-		scroll-snap-type: y mandatory;
-	}
 }
 
 img {
@@ -123,6 +102,29 @@ svg {
 	max-height: 100%;
 	height: auto;
 	display: block;
+}
+
+main {
+	display: flex;
+		
+	//css snap point magic
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-destination: 50% 50%;
+	scroll-snap-points-x: repeat($width);
+	scroll-snap-type: mandatory;
+	//for chrome 69+
+	scroll-snap-type: x mandatory;
+
+	@media all and (min-width: 800px) {
+		flex-direction: column;
+		 //css snap point magic
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-points-y: repeat($height);
+		//for chrome 69+
+		scroll-snap-type: y mandatory;
+	}
 }
 
 section {
