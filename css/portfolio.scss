@@ -121,6 +121,7 @@ main {
 		overflow-x: hidden;
 		overflow-y: auto;
 		scroll-snap-points-y: repeat($height);
+		scroll-snap-type: mandatory;
 		//for chrome 69+
 		scroll-snap-type: y mandatory;
 	}
@@ -129,17 +130,10 @@ main {
 section {
 	height: $height;
 	width: $width;
-	position: relative;
-	z-index: 2;
-	flex: 0 0 $width;
+	flex: 1 0 $width;
 	padding: 3rem;
 	scroll-snap-coordinate: 50% 50%;
 	scroll-snap-align: center;
-
-	@media all and (min-width: 800px) {
-		width: 100%;
-		height: $height;
-	}
 
 	&.sub1 {
 		background-color: dodgerblue;
@@ -158,6 +152,22 @@ section {
 	position: sticky;
 	top: 0;
 	left: 0;
-	width: 100%;
 	z-index: 1;
+	text-align: center;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #FDF9FC;
+}
+
+.sub_section {
+	position: relative;
+	z-index: 2;
+	color: white;
+	font-size: 1.75rem;
+	box-shadow: 0px -5px 20px rgba(black,0.5);
+
+	display: flex;
+	align-items: center;
 }
