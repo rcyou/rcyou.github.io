@@ -116,6 +116,8 @@ main {
 	//for chrome 69+
 	scroll-snap-type: x mandatory;
 
+	-webkit-overflow-scrolling: touch;
+
 	@media all and (min-width: 800px) {
 		flex-direction: column;
 		 //css snap point magic
