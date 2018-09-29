@@ -116,7 +116,7 @@ main {
 	scroll-snap-type: x mandatory;
 
 	@media all and (min-width: 800px) {
-		display: block;
+		flex-direction: column;
 		 //css snap point magic
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -135,16 +135,8 @@ section {
 	scroll-snap-coordinate: 50% 50%;
 	scroll-snap-align: center;
 
-	&.sub1 {
-		background-color: dodgerblue;
-	}
-		
-	&.sub2 {
-		background-color: goldenrod;
-	}
-		
-	&.sub3 {
-		background-color: mistyrose;
+	@media all and (min-width: 800px) {
+		flex: 1 0 $height;
 	}
 }
 
@@ -170,4 +162,17 @@ section {
 
 	display: flex;
 	align-items: center;
+
+
+	&.sub1 {
+		background-color: dodgerblue;
+	}
+		
+	&.sub2 {
+		background-color: goldenrod;
+	}
+		
+	&.sub3 {
+		background-color: mistyrose;
+	}
 }
