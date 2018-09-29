@@ -106,7 +106,6 @@ svg {
 
 main {
 	display: flex;
-		
 	//css snap point magic
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -117,7 +116,7 @@ main {
 	scroll-snap-type: x mandatory;
 
 	@media all and (min-width: 800px) {
-		flex-direction: column;
+		display: block;
 		 //css snap point magic
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -132,7 +131,7 @@ section {
 	width: $width;
 	position: relative;
 	z-index: 2;
-	flex: 1 0 $width;
+	flex: 0 0 $width;
 	padding: 3rem;
 	scroll-snap-coordinate: 50% 50%;
 	scroll-snap-align: center;
@@ -140,23 +139,18 @@ section {
 	@media all and (min-width: 800px) {
 		width: 100%;
 		height: $height;
-		flex: 0 0 $height;
 	}
 
 	&.sub1 {
 		background-color: dodgerblue;
-		// background-image: url(http://placekitten.com/2000/800);
-		// margin-top: $height;
 	}
 		
 	&.sub2 {
 		background-color: goldenrod;
-		// background-image: url(http://placebear.com/2000/800);
 	}
 		
 	&.sub3 {
 		background-color: mistyrose;
-		// background-image: url(http://placehold.it/2000x800);
 	}
 }
 
