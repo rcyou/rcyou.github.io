@@ -33,6 +33,7 @@ body {
 	min-height: 100%;
 	font-family: 'Helvetica Neue', sans-serif;
 	line-height: 1.5;
+	font-size: 1.6rem;
 	font-weight: 400;
 	background-color: #FFF;
 	color: #333;
@@ -112,6 +113,8 @@ main {
 section {
 	@media all and (min-width: 800px) {
 		flex: 1 1 auto;
+		height: 100vh;
+		overflow-y: scroll;
 	}
 }
 
