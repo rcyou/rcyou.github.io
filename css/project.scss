@@ -120,9 +120,12 @@ section {
 
 aside {
 	background-color: #D7DADD;
+	padding: 3rem;
+	order: -1;
 
 	@media all and (min-width: 800px) {
 		height: 100vh;
 		flex: 0 0 30rem;
+		order: 0;
 	}
 }
