@@ -34,8 +34,8 @@ html {
 
 body {
 	min-height: 100%;
-	font-size: 1.6rem;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 1.8rem;
+	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 	background-color: #FFF;
@@ -149,20 +149,24 @@ section {
 	top: 0;
 	left: 0;
 	z-index: 1;
+	padding-bottom: 6rem;
 
-	background-image: url('/images/ryoung-working.jpg');
+	background-image: url("../work/images/ryoung-working.jpg");
 	background-size: cover;
 	background-position: center top;
+    background-color: lightsteelblue;
+    background-blend-mode: soft-light;
 	
 
 	@media all and (min-width: 800px) {
-		text-align: center;
+		justify-content: center;
+		padding-bottom: 3rem;
+		padding-top: 15rem;
 	}
 	
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	background-color: #FDF9FC;
+	justify-content: flex-end;
 }
 
 .sub_section {
