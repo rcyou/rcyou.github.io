@@ -175,8 +175,11 @@ section {
 	color: white;
 	box-shadow: 0px -5px 20px rgba(black,0.5);
 
-	display: flex;
-	align-items: center;
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
 
 
 	&.sub1 {
