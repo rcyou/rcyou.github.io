@@ -101,6 +101,14 @@ svg {
 	display: block;
 }
 
+.lede {
+	font-size: 2.8rem;
+
+	@media all and (min-width: 800px) {
+		font-size: 3.2rem;
+	}
+}
+
 .images {
 	display: flex;
 	flex-direction: column;
@@ -138,5 +146,17 @@ svg {
 				width: 25%;	
 			}
 		}
+	}
+
+	img { width: 100%; }
+}
+
+figcaption {
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding: 0.5rem 1.5rem;
+
+	@media all and (min-width: 800px) {	
+		padding-left: 0;
 	}
 }
