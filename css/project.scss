@@ -110,6 +110,23 @@ p {
 	&:first-child { margin-top: 0; }
 }
 
+.hero {
+	position: relative;
+
+	h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+		font-size: 3rem;
+
+		@media all and (min-width: 800px) {
+			font-size: 6rem;
+		}
+	}
+}
+
 .lede {
 	font-size: 2.8rem;
 	line-height: 1.25;
