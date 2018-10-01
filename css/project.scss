@@ -31,7 +31,7 @@ html {
 
 body {
 	min-height: 100%;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.5;
 	font-size: 1.8rem;
 	font-weight: 400;
@@ -101,8 +101,14 @@ svg {
 	display: block;
 }
 
+p {
+	margin: 1rem 0;
+	&:first-child { margin-top: 0; }
+}
+
 .lede {
 	font-size: 2.8rem;
+	line-height: 1.25;
 
 	@media all and (min-width: 800px) {
 		font-size: 3.2rem;
@@ -152,11 +158,15 @@ svg {
 }
 
 figcaption {
-	font-size: 1.4rem;
+	font-size: 1rem;
 	font-weight: 700;
-	padding: 0.5rem 1.5rem;
+	padding: 0.5rem;
 
 	@media all and (min-width: 800px) {	
 		padding-left: 0;
 	}
+}
+
+.content {
+	padding: 6rem 2rem;
 }
