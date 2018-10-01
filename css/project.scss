@@ -101,15 +101,6 @@ svg {
 	display: block;
 }
 
-main {
-	display: flex;
-	flex-direction: column;
-
-	@media all and (min-width: 800px) {
-		flex-direction: row;
-	}
-}
-
 .images {
 	display: flex;
 	flex-direction: column;
