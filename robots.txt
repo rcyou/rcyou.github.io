@@ -1,6 +1,6 @@
 User-agent: *
-Disallow: /portfolio/
-Noindex: /portfolio/
+Disallow: /work/
+Noindex: /work/
 
 
 
