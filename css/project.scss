@@ -110,22 +110,42 @@ main {
 	}
 }
 
-section {
+.images {
+	display: flex;
+	flex-direction: column;
+
 	@media all and (min-width: 800px) {
-		flex: 1 1 auto;
-		height: 100vh;
-		overflow-y: scroll;
+		flex-direction: row;
+		
+		figure {
+			flex: 1 1 auto;	
+		}
 	}
-}
 
-aside {
-	background-color: #D7DADD;
-	padding: 3rem;
-	order: -1;
+	&.img-2 {
+		@media all and (min-width: 800px) {			
+			figure {
+				flex: 1 1 50%;
+				width: 50%;	
+			}
+		}
+	}
 
-	@media all and (min-width: 800px) {
-		height: 100vh;
-		flex: 0 0 30rem;
-		order: 0;
+	&.img-3 {
+		@media all and (min-width: 800px) {			
+			figure {
+				flex: 1 1 33.333%;
+				width: 33.333%;	
+			}
+		}
+	}
+
+	&.img-4 {
+		@media all and (min-width: 800px) {			
+			figure {
+				flex: 1 1 25%;
+				width: 25%;	
+			}
+		}
 	}
 }
