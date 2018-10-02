@@ -231,10 +231,7 @@ section {
 
 	.project_desc {
 		h2 { margin-bottom: 1.5rem; }
-
-		@media all and (min-width: 650px) {
-			width: 66.666%;
-		}
+		width: 66.666%;
 	}
 
 
