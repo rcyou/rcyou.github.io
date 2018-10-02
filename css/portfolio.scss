@@ -34,7 +34,7 @@ html {
 
 body {
 	min-height: 100%;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-family: 'Mukta', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
@@ -67,21 +67,21 @@ h1, h2, h3 {
 h1 {
 	font-size: 2.8rem;
 	@media all and (min-width: 800px) {
-		font-size: 4.2rem;
+		font-size: 4.8rem;
 	}
 }
 
 h2 {
 	font-size: 2.8rem;
 	@media all and (min-width: 800px) {
-		font-size: 4.2rem;
+		font-size: 4.8rem;
 	}
 }
 
 h3 { font-size: 2.8rem; }
 
 h4 {
-	font-size: 2.25rem;
+	font-size: 2.1rem;
 	line-height: 1.25;
 }
 
@@ -147,12 +147,16 @@ section {
 	width: $width;
 	flex: 1 0 $width;
 	padding: 3rem;
+	font-size: 1.8rem;
 	scroll-snap-coordinate: 50% 50%;
 	scroll-snap-align: center;
 
 	@media all and (min-width: 800px) {
 		flex: 1 0 $height;
+		font-size: 2.1rem;
 	}
+
+
 }
 
 #cover {
@@ -160,7 +164,6 @@ section {
 	top: 0;
 	left: 0;
 	z-index: 1;
-	padding-bottom: 6rem;
 
 	background-image: url("../work/images/ryoung-working.jpg");
 	background-size: cover;
@@ -169,15 +172,27 @@ section {
     background-blend-mode: soft-light;
 	
 	h1 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
 		span { display: block; }
+
+		#name { margin-right: 4.5rem; }
+		
 		.txt-small {
 			text-transform: uppercase;
 			font-size: 1.6rem;
 			font-weight: 800;
+
+			&:first-child {
+				flex: 1 0 100%;
+				width: 100%;
+			}
 		}
 	}
 
-	@media all and (min-width: 800px) {
+	@media all and (min-width: 650px) {
 		justify-content: center;
 		padding-bottom: 3rem;
 		padding-top: 15rem;
@@ -200,6 +215,12 @@ section {
 		height: 100%;
 		display: flex;
 		align-items: center;
+	}
+
+	.project_desc {
+		@media all and (min-width: 650px) {
+			width: 50%;
+		}
 	}
 
 
