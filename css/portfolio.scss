@@ -222,7 +222,7 @@ section {
 	a {
 		position: relative;
 		overflow: hidden;
-		z-index: 1;
+		z-index: 10;
 		text-decoration: none;
 		color: #FFF;
 		height: 100%;
@@ -230,7 +230,7 @@ section {
 		align-items: flex-start;
 		padding-top: 6rem;
 
-		@media all and (min-width: 650px) {
+		@media all and (min-width: 800px) {
 			align-items: center;
 			padding-top: 0;
 		}
@@ -238,11 +238,13 @@ section {
 
 	.project_desc {
 		h2 { margin-bottom: 1.5rem; }
-		width: 66.666%;
+		width: 75%;
+		text-shadow: 2px 4px 8px rgba(0,0,0,0.35);
 	}
 
 
 	&.tr {
+		background-repeat: no-repeat;
 		background-image: url("../work/images/tr-bg.jpg");
 		background-position: left center;
 
@@ -261,6 +263,7 @@ section {
 	}
 		
 	&.af {
+		background-repeat: no-repeat;
 		background-image: url("../work/images/af-bg.jpg");
 		background-position: left;
 
@@ -304,8 +307,8 @@ section {
 			position: absolute;
 			bottom: -6rem;
 			right: 3rem;
-			height: 34rem;
-			width: 40rem;
+			height: 41rem;
+			width: 48rem;
 			background-image: url("../work/images/bh-phone.png");
 			background-position: center;
 			background-size: contain;
@@ -320,6 +323,39 @@ section {
 				height: 47rem;
 				width: 55rem;
 			}
+		}
+	}
+
+	&.dmpa {
+		background-repeat: no-repeat;
+		background-image: url("../work/images/dmpa-bg.jpg");
+		background-position: center;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: black;
+			mix-blend-mode: soft-light;
+			opacity: 0.75;
+			z-index: 0;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: black;
+			opacity: 0.35;
+			z-index: 0;
 		}
 	}
 }
