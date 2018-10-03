@@ -143,6 +143,7 @@ main {
 }
 
 section {
+	overflow: hidden;
 	height: $height;
 	width: $width;
 	flex: 1 0 $width;
@@ -261,10 +262,64 @@ section {
 		
 	&.af {
 		background-image: url("../work/images/af-bg.jpg");
-		background-position: right center;
+		background-position: left;
+
+		@media all and (min-width: 800px) {
+			background-position: right center;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 6rem;
+			right: 3rem;
+			height: 8rem;
+			width: 26rem;
+			background-image: url("../work/images/af-logo.png");
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: 0;
+
+			@media all and (min-width: 800px) {
+				right: 6rem;
+				bottom: 6rem;
+				height: 13rem;
+				width: 46rem;
+			}
+		}
 	}
 		
-	&.sub3 {
-		background-color: indigo;
+	&.bh {
+		background-color: #827d00;
+
+		@media all and (min-width: 800px) {
+			background-position: right center;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -6rem;
+			right: 3rem;
+			height: 34rem;
+			width: 40rem;
+			background-image: url("../work/images/bh-phone.png");
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: 0;
+			filter: drop-shadow(-10px 20px 10px rgba(0,0,0,0.35));
+
+			@media all and (min-width: 800px) {
+				right: -10rem;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 47rem;
+				width: 55rem;
+			}
+		}
 	}
 }
