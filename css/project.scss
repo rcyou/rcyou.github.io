@@ -33,7 +33,7 @@ body {
 	min-height: 100%;
 	font-family: 'Mukta', sans-serif;
 	line-height: 1.5;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: 400;
 	background-color: #FFF;
 	color: #333;
@@ -43,8 +43,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 
-	@media all and (min-width: 800px) {		
-		font-size: 2rem;
+	@media all and (min-width: 700px) {		
+		font-size: 1.8rem;
 	}
 }
 
@@ -58,7 +58,7 @@ h1, h2, h3 {
 	margin: 0 0 0.5rem 0;
 	padding: 0;
 	line-height: 1.05;
-	font-weight: 800;
+	font-weight: 700;
 }
 
 h1 {
@@ -108,10 +108,15 @@ svg {
 p {
 	margin: 1rem 0;
 	&:first-child { margin-top: 0; }
+	&:last-child { margin-bottom: 0; }
 }
 
 .hero {
-	position: relative;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
 
 	h1 {
 		position: absolute;
@@ -124,18 +129,65 @@ p {
 		color: #FFF;
 		font-size: 4rem;
 
-		@media all and (min-width: 800px) {
+		@media all and (min-width: 700px) {
 			font-size: 6rem;
 		}
 	}
 }
 
+.intro {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
 .lede {
 	font-size: 2.8rem;
 	line-height: 1.25;
+	flex: 1 0 75%;
+	margin: 0;
 
-	@media all and (min-width: 800px) {
+	@media all and (min-width: 700px) {
 		font-size: 3.2rem;
+	}
+}
+
+.quick-hits {
+	list-style: none;
+	flex: 0 0 26rem;
+	width: 26rem;
+	margin: 0 0 3rem 0;
+
+	@media all and (min-width: 700px) {
+		padding-right: 3rem;
+	}
+	
+	li {
+		font-size: 1.8rem;
+		display: block;
+		margin-bottom: 1rem;
+
+		strong {
+			display: block;
+			line-height: 1;
+		}
+	}
+}
+
+.mini-header {
+	font-size: 1.4rem;
+	font-weight: 700;
+	display: block;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+}
+
+.sider {
+	@media all and (min-width: 700px) {
+		* {
+			width: 50%;
+			max-width: 50rem;
+		}
 	}
 }
 
@@ -143,8 +195,9 @@ p {
 	display: flex;
 	flex-direction: column;
 
-	@media all and (min-width: 800px) {
+	@media all and (min-width: 700px) {
 		flex-direction: row;
+		flex-wrap: wrap;
 		
 		figure {
 			flex: 1 1 auto;	
@@ -152,28 +205,28 @@ p {
 	}
 
 	&.img-2 {
-		@media all and (min-width: 800px) {			
+		@media all and (min-width: 700px) {			
 			figure {
-				flex: 1 1 50%;
+				flex: 0 0 50%;
 				width: 50%;	
 			}
 		}
 	}
 
 	&.img-3 {
-		@media all and (min-width: 800px) {			
+		@media all and (min-width: 700px) {			
 			figure {
-				flex: 1 1 33.333%;
+				flex: 0 0 33.333%;
 				width: 33.333%;	
 			}
 		}
 	}
 
 	&.img-4 {
-		@media all and (min-width: 800px) {			
+		@media all and (min-width: 700px) {			
 			figure {
-				flex: 1 1 25%;
-				width: 25%;	
+				flex: 0 0 50%;
+				width: 50%;	
 			}
 		}
 	}
@@ -182,15 +235,18 @@ p {
 }
 
 figcaption {
+	display: block;
+	width: 100%;
 	font-size: 1.2rem;
 	font-weight: 700;
 	padding: 0.5rem;
-
-	@media all and (min-width: 800px) {	
-		padding-left: 0;
-	}
+	background-color: white;
 }
 
 .content {
+	background-color: white;
 	padding: 6rem 2rem;
+	@media all and (min-width: 700px) {
+		padding: 6rem 4rem;
+	}
 }

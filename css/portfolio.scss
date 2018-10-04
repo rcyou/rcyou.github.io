@@ -46,7 +46,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 
-	@media all and (min-width: 800px) {
+	@media all and (min-width: 700px) {
 		font-size: 2.1rem;
 	}
 }
@@ -130,7 +130,7 @@ main {
 
 	-webkit-overflow-scrolling: touch;
 
-	@media all and (min-width: 800px) {
+	@media all and (min-width: 700px) {
 		flex-direction: column;
 		 //css snap point magic
 		overflow-x: hidden;
@@ -146,15 +146,13 @@ section {
 	height: $height;
 	width: $width;
 	flex: 1 0 $width;
-	padding: 3rem;
 	font-size: 1.8rem;
 	scroll-snap-coordinate: 50% 50%;
 	scroll-snap-align: center;
 
-	@media all and (min-width: 800px) {
+	@media all and (min-width: 700px) {
 		flex: 1 0 $height;
 		font-size: 2.1rem;
-		padding: 6rem;
 	}
 
 
@@ -165,12 +163,17 @@ section {
 	top: 0;
 	left: 0;
 	z-index: 1;
+	padding: 3rem;
 
 	background-image: url("../work/images/ryoung-working.jpg");
 	background-size: cover;
 	background-position: center top;
     background-color: lightsteelblue;
     background-blend-mode: soft-light;
+
+    @media all and (min-width: 700px) {
+    	padding: 6rem;
+    }
 	
 	h1 {
 		display: flex;
@@ -228,11 +231,11 @@ section {
 		height: 100%;
 		display: flex;
 		align-items: flex-start;
-		padding-top: 6rem;
+		padding: 3rem;
 
-		@media all and (min-width: 800px) {
+		@media all and (min-width: 700px) {
 			align-items: center;
-			padding-top: 0;
+			padding: 6rem;
 		}
 	}
 
@@ -267,11 +270,11 @@ section {
 		background-image: url("../work/images/af-bg.jpg");
 		background-position: left;
 
-		@media all and (min-width: 800px) {
+		@media all and (min-width: 700px) {
 			background-position: right center;
 		}
 
-		&:before {
+		a:before {
 			content: "";
 			display: block;
 			position: absolute;
@@ -285,7 +288,7 @@ section {
 			background-repeat: no-repeat;
 			z-index: 0;
 
-			@media all and (min-width: 800px) {
+			@media all and (min-width: 700px) {
 				right: 6rem;
 				bottom: 6rem;
 				height: 13rem;
@@ -297,16 +300,16 @@ section {
 	&.bh {
 		background-color: #827d00;
 
-		@media all and (min-width: 800px) {
+		@media all and (min-width: 700px) {
 			background-position: right center;
 		}
 
-		&:before {
+		a:before {
 			content: "";
 			display: block;
 			position: absolute;
 			bottom: -6rem;
-			right: 3rem;
+			right: 0;
 			height: 41rem;
 			width: 48rem;
 			background-image: url("../work/images/bh-phone.png");
@@ -316,7 +319,7 @@ section {
 			z-index: 0;
 			filter: drop-shadow(-10px 20px 10px rgba(0,0,0,0.35));
 
-			@media all and (min-width: 800px) {
+			@media all and (min-width: 700px) {
 				right: -10rem;
 				top: 50%;
 				transform: translateY(-50%);
