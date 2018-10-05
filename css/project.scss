@@ -269,7 +269,7 @@ figcaption {
 	background-color: white;
 	padding: 6rem 2rem;
 
-	+ .content { padding-top: 0; }
+	+ .content { padding-top: 0.5rem; }
 
 	@media all and (min-width: 70rem) {
 		padding-left: 4rem;
