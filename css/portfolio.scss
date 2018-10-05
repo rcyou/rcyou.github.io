@@ -14,6 +14,36 @@ hr{display:block;height:1px;margin:1em 0;padding:0;border:0;border-top:1px solid
 button,input,select,textarea{margin:0;outline:0!important}
 button,input,select{vertical-align:middle}
 
+@mixin hover() {
+  &:hover,
+  &:focus,
+  &:active { @content }
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+	& {
+		@each $property in $properties {
+			#{$property}: $min-value;
+		}
+
+		@media screen and (min-width: $min-vw) {
+			@each $property in $properties {
+				#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+			}
+		}
+
+		@media screen and (min-width: $max-vw) {
+			@each $property in $properties {
+				#{$property}: $max-value;
+			}
+		}
+	}
+}
+
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
 /* ==========================================================================
  Global Styling
  ========================================================================== */
@@ -46,7 +76,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 
-	@media all and (min-width: 700px) {
+	@media all and (min-width: 70rem) {
 		font-size: 2.1rem;
 	}
 }
@@ -66,14 +96,14 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 2.8rem;
-	@media all and (min-width: 650px) {
-		font-size: 4.8rem;
+	@media all and (min-width: 65rem) {
+		font-size: 5.2rem;
 	}
 }
 
 h2 {
 	font-size: 2.8rem;
-	@media all and (min-width: 650px) {
+	@media all and (min-width: 65rem) {
 		font-size: 4.8rem;
 	}
 }
@@ -130,7 +160,7 @@ main {
 
 	-webkit-overflow-scrolling: touch;
 
-	@media all and (min-width: 700px) {
+	@media all and (min-width: 70rem) {
 		flex-direction: column;
 		 //css snap point magic
 		overflow-x: hidden;
@@ -150,7 +180,7 @@ section {
 	scroll-snap-coordinate: 50% 50%;
 	scroll-snap-align: center;
 
-	@media all and (min-width: 700px) {
+	@media all and (min-width: 70rem) {
 		flex: 1 0 $height;
 		font-size: 2.1rem;
 	}
@@ -171,7 +201,7 @@ section {
     background-color: lightsteelblue;
     background-blend-mode: soft-light;
 
-    @media all and (min-width: 700px) {
+    @media all and (min-width: 70rem) {
     	padding: 6rem;
     }
 	
@@ -202,7 +232,7 @@ section {
 		}
 	}
 
-	@media all and (min-width: 650px) {
+	@media all and (min-width: 65rem) {
 		justify-content: center;
 		padding-bottom: 3rem;
 		padding-top: 15rem;
@@ -233,7 +263,7 @@ section {
 		align-items: flex-start;
 		padding: 3rem;
 
-		@media all and (min-width: 700px) {
+		@media all and (min-width: 70rem) {
 			align-items: center;
 			padding: 6rem;
 		}
@@ -270,7 +300,7 @@ section {
 		background-image: url("../work/images/af-bg.jpg");
 		background-position: left;
 
-		@media all and (min-width: 700px) {
+		@media all and (min-width: 70rem) {
 			background-position: right center;
 		}
 
@@ -288,7 +318,7 @@ section {
 			background-repeat: no-repeat;
 			z-index: 0;
 
-			@media all and (min-width: 700px) {
+			@media all and (min-width: 70rem) {
 				right: 6rem;
 				bottom: 6rem;
 				height: 13rem;
@@ -300,7 +330,7 @@ section {
 	&.bh {
 		background-color: #827d00;
 
-		@media all and (min-width: 700px) {
+		@media all and (min-width: 70rem) {
 			background-position: right center;
 		}
 
@@ -319,7 +349,7 @@ section {
 			z-index: 0;
 			filter: drop-shadow(-10px 20px 10px rgba(0,0,0,0.35));
 
-			@media all and (min-width: 700px) {
+			@media all and (min-width: 70rem) {
 				right: -10rem;
 				top: 50%;
 				transform: translateY(-50%);
