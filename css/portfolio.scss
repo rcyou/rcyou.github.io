@@ -330,10 +330,6 @@ section {
 	&.bh {
 		background-color: #827d00;
 
-		@media all and (min-width: 70rem) {
-			background-position: right center;
-		}
-
 		a:before {
 			content: "";
 			display: block;
@@ -355,6 +351,44 @@ section {
 				transform: translateY(-50%);
 				height: 47rem;
 				width: 55rem;
+			}
+		}
+	}
+
+	&.blss {
+		background-color: #FAF2FC;
+
+		.project_desc {
+			position: relative;
+			color: #444;
+			h2 { margin-bottom: 1.5rem; }
+			width: 75%;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+		}
+
+
+		a:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 5%;
+			left: 0;
+			height: 100vh;
+			width: 80rem;
+			background-image: linear-gradient(to bottom, #FAF2FC 5%, transparent 30%), url(../work/images/bliss-screens.png);
+			background-position: left top;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 0;
+			
+
+			@media all and (min-width: 700px) {
+				top: 0;
+				left: auto;
+				right: -25%;
+				background-image: url(../work/images/bliss-screens.png);
+				background-position: center top;
+				filter: drop-shadow(-3px 10px 3px rgba(0,0,0,0.15));
 			}
 		}
 	}
