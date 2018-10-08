@@ -352,6 +352,14 @@ section {
 				height: 47rem;
 				width: 55rem;
 			}
+
+			@media all and (min-width: 1300px) {
+				right: -20rem;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 67rem;
+				width: 79rem;
+			}
 		}
 	}
 
