@@ -132,6 +132,17 @@ svg {
 	display: block;
 }
 
+video {
+	display: block;
+	width: 100%;
+	max-width: 50rem;
+	margin: 3rem auto;
+
+	@media all and (min-width: 70rem) {
+		margin: 0 auto;
+	}
+}
+
 p {
 	margin: 1rem 0;
 	&:first-child { margin-top: 0; }

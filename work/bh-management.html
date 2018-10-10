@@ -39,8 +39,7 @@
 
     <section class="images img-1">
       <figure>
-        <img src="http://placehold.it/2000x800" alt="need alt text summary">
-        <figcaption>Caption goes here</figcaption>
+        <img src="./images/bh-banner.jpg" alt="circular BH logo placed between a couch and a house plant">
       </figure>
     </section>
 
@@ -50,8 +49,8 @@
 
     <section class="images img-1">
       <figure>
-        <img src="./images/bh-map-devices.jpg" alt="need alt text summary">
-        <figcaption>Caption for Fourth Image</figcaption>
+        <img src="./images/bh-map-devices.jpg" alt="a phone and tablet showing mockups of a map interface with location pin markers">
+        <figcaption>Mockups of the new community search UI.</figcaption>
       </figure>
     </section>
 
@@ -59,39 +58,50 @@
     <section class="content split-content">
       <span class="col">
         <h2 class="mini-header">UX Challenges</h2>
-        <p>Through internal team conversations and discussions with BH Management, it was clear that the previous state-based and city-based approaches to searching for an apartment community needed to change. Searching for an apartment isn’t only about checking availability and amenities. That comes later. The first step is figuring out where the building is in a city and what is nearby.</p>
-        <p>Before users couldn’t locate a building and then explore how near or far it was from their place of employment, a grocery store, or entertainment districts, among other things.</p>
-        <p>Utilizing a mapping API, the development team at Visionary Services implemented a location-based search tool. However, a problem arose when users zoomed in to the street or neighborhood level: information was covered up.</p>
+        <p>Through internal team conversations and discussions with BH Management, it was clear that the previous state-based and city-based approaches to searching for an apartment community needed to change. Searching for an apartment isn’t just about checking availability and amenities. That comes later. The first step is figuring out where the building is and what is nearby.</p>
+        <p>Before users were restricted to filtering communities by state and then by city. This mainly served to structure URLs for improved SEO. However, people don’t search that way. Instead they plug in a city or address and explore what is nearby. People in Kansas City especially found the old process challenging.</p>
       </span>
     </section>
 
-    <section class="images img-2">
+    <section class="images img-1">
       <figure>
-        <img src="http://placehold.it/600x400" alt="need alt text summary">
-        <figcaption>Caption for Fourth Image</figcaption>
-      </figure>
-      <figure>
-        <img src="http://placehold.it/600x400" alt="need alt text summary">
-        <figcaption>Caption for Fourth Image</figcaption>
+        <img src="./images/bh-old-search.jpg" alt="screen shot of a map interface above a list of city links in Texas">
+        <figcaption>Example of the old community search interface.</figcaption>
       </figure>
     </section>
 
     <section class="content split-content">
       <span class="col">
         <h2 class="mini-header">UX Solutions</h2>
-        <p>For desktop users or those with screens larger than a small tablet, the search interface covering up content wasn’t ideal but also wasn’t terrible. However, small-screen mobile users, which accounted for 55% of the site’s traffic at the time, had a bad experience.</p>
-        <p>After looking at our development limitations and determining options, we realized it would be better if some things just could get out of the user’s way.</p>
+        <p>Utilizing a mapping API, the development team at Visionary Services implemented a location-based search tool. To prevent inundating the user with a slew of overlapping pins, we decided to programmatically cluster nearby communities.</p>
+        <p>For the UI, I wanted to use something other than color to differentiate clusters – especially since color could accidently create bias and disturb visual balance as the map changed. Even though there would be a number in the middle of a cluster to indicate how many communities it represented, I opted for size and opacity.</p>
+        <p>This helped correlate the size of a point with the number of communities in its radius and worked with the zoom level our developers put in place as users further explored a cluster.</p>
+      </span>
+      <span class="col">
+        <video controls muted>
+          <source src="./images/bh-map-video.mp4" type="video/mp4">
+        </video>
       </span>
     </section>
 
-    <section class="images img-1">
+    <section class="images contained img-1">
       <figure>
-        <img src="http://placehold.it/2000x800" alt="need alt text summary">
+        <img src="./images/bh-mobile-search.png" alt="a series of phones with mockups showing community clusters and user search">
+        <figcaption>Community clusters have a clear visual range, while individual apartment communities are a bit heavier to indicate their definitive purpose.</figcaption>
       </figure>
     </section>
 
     <section class="content">
-      <p>This tongue-in-cheek request, led me to leveraging event-based interactions within the map to make the obstructing search bar opaque and minimized when a user selected an apartment community. This allowed users to explore what was nearby uninhibited.</p>
+      <p>For desktop users or those with screens larger than a small tablet, we were able to display a list of communities located within the current map view next to the map that had pin markers.</p>
+      <p>However, small-screen mobile users, which accounted for 55% of the site’s traffic at the time, had a really long screen of content with the map and communities list stacked above one another. Instead, it was important to make the mobile experience feel organic and almost like using a native app.</p>
+      <p>After looking at our development limitations and determining options, this led me to leveraging event-based interactions to toggle different screens. This allowed users to choose their experience. They could explore without being inhibited and view a list of results on demand.</p>
+    </section>
+
+    <section class="images contained img-1">
+      <figure>
+        <img src="./images/bh-mobile-list.png" alt="a series of phones with mockups storyboarding the map to list interaction">
+        <figcaption>A series of mockups storyboarding the map to list interaction</>
+      </figure>
     </section>
 
     <section class="content">
