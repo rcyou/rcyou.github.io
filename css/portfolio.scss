@@ -149,14 +149,14 @@ svg {
 main {
 	height: 100vh;
 	display: flex;
-	//css snap point magic
-	overflow-x: auto;
-	overflow-y: hidden;
-	scroll-snap-destination: 50% 50%;
-	scroll-snap-points-x: repeat($width);
+	flex-direction: column;
+	 //css snap point magic
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-snap-points-y: repeat($height);
 	scroll-snap-type: mandatory;
 	//for chrome 69+
-	scroll-snap-type: x mandatory;
+	scroll-snap-type: y mandatory;
 
 	-webkit-overflow-scrolling: touch;
 
@@ -175,7 +175,7 @@ main {
 section {
 	height: $height;
 	width: $width;
-	flex: 1 0 $width;
+	flex: 1 0 $height;
 	font-size: 1.8rem;
 	scroll-snap-coordinate: 50% 50%;
 	scroll-snap-align: center;
@@ -371,7 +371,7 @@ section {
 			color: #444;
 			h2 { margin-bottom: 1.5rem; }
 			width: 75%;
-			text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+			text-shadow: none;
 		}
 
 
