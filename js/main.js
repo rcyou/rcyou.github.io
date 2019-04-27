@@ -44,18 +44,18 @@ function forEachVisibleItem(nodeList) {
   }
 }
 
-// track outbound links
-// on click, get the href attribute and fire an anaytics event
-// include URL in parameters sent to Google Analytics
-// via http://veithen.github.io/2015/01/24/outbound-link-tracking.html
+// Registers a click on an outbound link in Analytics
+// Takes a valid URL string as an argument and uses as event label
+// Setting the transport method to 'beacon' sends hit
+// using 'navigator.sendBeacon' in browsers that support it
 
-function trackOutboundLink() {
-  $("a.outbound").click(function(e) {
-      var url = $(this).attr("href");
-      ga("send", "event", "outbound", "click", url, {
-        'transport': 'beacon'
-      });
-    });
+var getOutboundLink = function(url) {
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': url,
+    'transport_type': 'beacon',
+    'event_callback': function(){document.location = url;}
+  });
 }
 
 var menu_toggle = document.getElementById('menu_toggle');
