@@ -420,6 +420,119 @@ nav[data-state="open"] #site_menu {
       -ms-transform: translateX(0);
           transform: translateX(0); }
 
+h1, h2 {
+  text-align: center; }
+
+#profile_photo {
+  max-width: 45rem;
+  margin: 0 auto;
+  position: relative; }
+  #profile_photo:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    background-image: url("https://images.unsplash.com/photo-1487309078313-fad80c3ec1e5");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; }
+
+#intro h1 span {
+  display: block; }
+  #intro h1 span:last-child {
+    font-size: 1.8rem; }
+
+section {
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+  section:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 10rem;
+    border-bottom: 1px solid #DDD; }
+  section:first-child {
+    margin-top: 0; }
+  section p, section ul {
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto; }
+  section ul {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem; }
+
+a[href*="/resume"] {
+  display: block;
+  text-align: center; }
+
+.social_media {
+  padding: 0;
+  margin: 3rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .social_media li {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 4.2rem;
+            flex: 0 0 4.2rem;
+    margin: 0 0.75rem; }
+  .social_media a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid #333;
+    -webkit-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out; }
+    .social_media a:hover svg, .social_media a:hover svg path, .social_media a:focus svg, .social_media a:focus svg path {
+      fill: #FFF; }
+    .social_media a svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      max-width: 1.8rem;
+      -webkit-transition: all 150ms ease-in-out;
+      -o-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out; }
+    .social_media a[data-platform="dribbble"]:hover, .social_media a[data-platform="dribbble"]:focus {
+      border-color: #ea4c89;
+      background-color: #ea4c89; }
+    .social_media a[data-platform="linkedin"]:hover, .social_media a[data-platform="linkedin"]:focus {
+      border-color: #0077b5;
+      background-color: #0077b5; }
+    .social_media a[data-platform="twitter"]:hover, .social_media a[data-platform="twitter"]:focus {
+      border-color: #1da1f2;
+      background-color: #1da1f2; }
+    .social_media a[data-platform="github"]:hover, .social_media a[data-platform="github"]:focus {
+      border-color: #6e5494;
+      background-color: #6e5494; }
+    .social_media a[data-platform="codepen"]:hover, .social_media a[data-platform="codepen"]:focus {
+      border-color: #555555;
+      background-color: #555555; }
+
 .project_card {
   display: block;
   max-width: 45rem;

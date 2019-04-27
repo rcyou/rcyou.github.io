@@ -1,0 +1,88 @@
+.project_card {
+	display: block;
+	max-width: 45rem;
+	margin: 3rem auto;
+
+	&:first-child { margin-top: 0; }
+	&:last-child { margin-bottom: 0; }
+
+	&[data-state="inactive"] {
+		.project_desc a {
+			display: none;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		.project_thumb {
+			position: relative;
+			overflow: hidden;
+
+			img { transition: filter 300ms ease-in-out; }
+
+			&:before,
+			&:after {
+				display: block;
+				z-index: 5;
+				position: absolute;
+				transition: all 300ms ease-in-out;
+			}
+
+			&:before {
+				content: "";
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-color: $c_ltgrey;
+				opacity: 0;
+			}
+
+			&:after {
+				content: "Coming Soon";
+				color: $c_black;
+				top: 150%;
+				left: 50%;
+				transform: translate(-50%,-150%);
+				width: 100%;
+				text-align: center;
+			}
+
+			&:hover,
+			&:focus {
+				img { filter: grayscale(1); }
+				&:before { opacity: 0.75; }
+				&:after {
+					top: 50%;
+					transform: translate(-50%,-50%);
+				}
+			}
+		}
+	}
+}
+
+.project_thumb {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+.project_desc {
+	a { display: inline-block; }
+	h2, h3 { margin-bottom: 1.5rem; }
+}
+
+@media all and (min-width: $mq_tablet) {
+	.project_card {
+		display: flex;
+		max-width: 75rem;
+		align-items: center;
+
+		.project_thumb {
+			flex: 0 0 25rem;
+			width: 25rem;
+			margin: 0;
+		}
+
+		.project_desc { padding-left: 3rem; }
+	}
+}

@@ -1,0 +1,125 @@
+body {
+	overflow-x: hidden;
+	
+	@media only screen and (min-width: 8.5in)  {
+		max-width: 8.5in;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+#page_top {
+	@media only screen and (min-width: 8.5in)  {
+		flex: 1 1 100%;
+	}
+
+	h1 { text-align: left; }
+}
+
+main {
+	@media only screen and (min-width: 8.5in)  {
+		flex: 0 0 66.6666%;
+		padding-right: 0.25in;
+
+		section { padding: 0; }
+	}
+}
+
+aside {
+	@media only screen and (min-width: 8.5in)  {
+		flex: 0 0 33.33%;
+
+		> div { padding: 0; }
+	}
+}
+
+.date_timespan {
+	display: block;
+	font-family: $f_work;
+	
+	li & { margin: 0.25rem 0 0.75rem 0; }
+}
+
+section,
+aside > div {
+	margin-bottom: 3rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+
+	&:last-child { margin-bottom: 0; }
+}
+
+h1 { margin: 0; }
+
+h2 {
+	margin: 1.5rem 0;
+	font-size: 2.8rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid black;
+}
+
+h3 {
+	margin: 0 0 0.75rem 0;
+	font-size: 2.2rem;
+}
+
+h2, h3 {
+	font-weight: $f_bold;
+	line-height: 1.25;
+}
+
+ul {
+	padding: 0 0 0 1.75rem;
+	margin: 0;
+	
+	li {
+		margin-top: 1.5rem;
+		line-height: 1.25;
+
+		&:first-child { margin-top: 0; }
+	}
+}
+
+p {
+	margin: 1.5rem 0 0 0;
+	&:first-child { margin-top: 0; }
+}
+
+address,
+.company_phone,
+.date_timespan {
+	color: $c_grey;
+	margin: 0;
+	font-style: normal;
+	font-size: 1.4rem;
+	font-family: $f_work;
+}
+
+.company_info {  }
+
+.company_name {
+	font-size: 1.6rem;
+	font-family: $f_work;
+	font-weight: $f_bold;
+}
+
+#work_experience,
+#education {
+	article {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 3rem;
+
+		.date_timespan { order: -1; }
+	}
+}
+
+.subtext {
+	display: block;
+	color: $c_grey;
+	margin: 0;
+	font-style: normal;
+	font-size: 1.4rem;
+	font-family: $f_work;
+}
