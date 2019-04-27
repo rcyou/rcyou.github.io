@@ -48,15 +48,15 @@ function forEachVisibleItem(nodeList) {
 // on click, get the href attribute and fire an anaytics event
 // include URL in parameters sent to Google Analytics
 // via http://veithen.github.io/2015/01/24/outbound-link-tracking.html
-//
-// function trackOutboundLink() {
-//   $("a.outbound").click(function(e) {
-//       var url = $(this).attr("href");
-//       ga("send", "event", "outbound", "click", url, {
-//         'transport': 'beacon'
-//       });
-//     });
-// }
+
+function trackOutboundLink() {
+  $("a.outbound").click(function(e) {
+      var url = $(this).attr("href");
+      ga("send", "event", "outbound", "click", url, {
+        'transport': 'beacon'
+      });
+    });
+}
 
 var menu_toggle = document.getElementById('menu_toggle');
 var navigation = menu_toggle.parentNode;
