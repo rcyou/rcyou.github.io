@@ -31,12 +31,13 @@ nav { line-height: 1; }
 #site_menu {
 	position: fixed;
 	top: 0;
+  opacity: 1 !important;
 	left: 100%;
 	z-index: 100;
 	height: 100vh;
 	width: 100vw;
   transform: translateX(100%);
-  transition: transform 400ms ease-in-out, opacity 400ms ease-in-out, left 400ms ease-in-out;
+  transition: transform 300ms ease-in-out, left 300ms ease-in-out;
   background-color: rgba($c_teal, 0.95);
   text-align: center;
   padding: 25vh 1.5rem;
@@ -55,40 +56,6 @@ nav { line-height: 1; }
       }
     }
 }
-
-// #menu_toggle {
-// 	appearance: none;
-// 	font-size: 1.6rem;
-// 	font-family: inherit;
-// 	margin: 0;
-// 	border: none;
-// 	position: relative;
-// 	z-index: 101;
-
-// 	span {
-// 		position: relative;
-// 		display: inline-block;
-// 		height: 0.8rem;
-// 		width: 0.8rem;
-// 		border-radius: 100%;
-// 		border: 1px solid $c_black;
-
-// 		&:before,
-// 		&:after {
-// 			content: "";
-// 			position: absolute;
-// 			top: -1px;
-// 			display: inline-block;
-// 			height: 0.8rem;
-// 			width: 0.8rem;
-// 			border-radius: 100%;
-// 			border: 1px solid $c_black;
-// 		}
-
-// 		&:before { left: -1.25rem; }
-// 		&:after { right: -1.25rem; }
-// 	}
-// }
 
 .cmn-toggle-switch {
   display: block;

@@ -368,6 +368,7 @@ nav {
 #site_menu {
   position: fixed;
   top: 0;
+  opacity: 1 !important;
   left: 100%;
   z-index: 100;
   height: 100vh;
@@ -375,11 +376,11 @@ nav {
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: opacity 400ms ease-in-out, left 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  transition: opacity 400ms ease-in-out, left 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  -o-transition: transform 400ms ease-in-out, opacity 400ms ease-in-out, left 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, opacity 400ms ease-in-out, left 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, opacity 400ms ease-in-out, left 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  -webkit-transition: left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -o-transition: transform 300ms ease-in-out, left 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, left 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
   background-color: rgba(0, 131, 165, 0.95);
   text-align: center;
   padding: 25vh 1.5rem;
