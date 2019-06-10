@@ -672,7 +672,13 @@ nav[data-state="open"] #site_menu {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
     #about figure figcaption {
       -webkit-box-ordinal-group: 0;
           -ms-flex-order: -1;
