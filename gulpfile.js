@@ -1,6 +1,18 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
-	autoprefix = require('gulp-autoprefixer');
+	autoprefix = require('gulp-autoprefixer'),
+	fileinclude = require('gulp-file-include');
+
+
+// -- Add HTML
+gulp.task('fileinclude', function() {
+  gulp.src(['tpls/*.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest(''));
+});
 
 // -- SASS
 gulp.task('sass', function() {
@@ -17,12 +29,14 @@ gulp.task('sass', function() {
 // -- WATCH
 // the array is a list of tasks that should be done before 'watch' task
 // array order is not important
-gulp.task('watch', ['sass'], function() {
+gulp.task('watch', ['sass','fileinclude'], function() {
 	// watch is a built in method for gulp
 	// pass in params for files to watch in a directory
 	// array inludes names of tasks to run when gulp sees a change
 	// if using partials, make sure the path is to those file, not parent .scss file
 	gulp.watch('css/scss/partials/*.scss', ['sass']);
+	gulp.watch('includes/*.html', ['fileinclude']);
+	gulp.watch('tpls/*.html', ['fileinclude']);
 });
 // 'gulp watch' will keep running after command is entered
 // to stop, type ctrl + c

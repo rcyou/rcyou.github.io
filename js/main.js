@@ -81,11 +81,12 @@ function domReady () {
   var page_sections = document.querySelectorAll('main > section'), i;
   var aside_sections = document.querySelectorAll('aside > div'), i;
 
-  forEachVisibleItem(page_sections);
-  forEachVisibleItem(aside_sections);
+  // might use this later but not right now ...
+  // forEachVisibleItem(page_sections);
+  // forEachVisibleItem(aside_sections);
 
-  window.addEventListener('scroll', function (event) {
-    forEachVisibleItem(page_sections);
-    forEachVisibleItem(aside_sections);
-  }, false);
+  // window.addEventListener('scroll', function (event) {
+  //   forEachVisibleItem(page_sections);
+  //   forEachVisibleItem(aside_sections);
+  // }, false);
 }

@@ -2,43 +2,57 @@ header {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	align-items: center;
-	padding: 3rem 1.5rem;
-	margin-bottom: 3rem;
+	align-items: flex-start;
+  padding-bottom: 3rem;
 }
 
 #logo {
 	display: inline-block;
 	margin-right: -2rem;
-	svg {
-		width: 7rem;
-	}
+	font-size: 3.2rem;
+  font-family: $f_marker;
+  line-height: 1.125;
+  text-decoration: none;
+  color: $c_black;
+
+  #tagline {
+    display: block;
+    font-family: $f_oswald;
+    font-size: 1.4rem;
+    font-weight: $f_light;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    padding: 1rem 0 0 0;
+  }
 }
 
 nav { line-height: 1; }
 
-#email_link {
-	display: inline-block;
-
-	svg { height: 3rem; }
-}
-
 #site_menu {
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 100%;
 	z-index: 100;
 	height: 100vh;
 	width: 100vw;
-    transform: translateX(100%);
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
-    background-color: rgba($c_white, 0.95);
-    text-align: center;
-    padding: 25vh 1.5rem;
-    font-size: 2.1rem;
+  transform: translateX(100%);
+  transition: transform 400ms ease-in-out, opacity 400ms ease-in-out, left 400ms ease-in-out;
+  background-color: rgba($c_teal, 0.95);
+  text-align: center;
+  padding: 25vh 1.5rem;
+  font-size: 2.1rem;
 
     li {
     	margin-bottom: 3rem;
+
+      a {
+        display: block;
+        font-family: $f_marker;
+        color: $c_white;
+        font-size: 3.2rem;
+        text-decoration: none;
+        padding: 1.5rem;
+      }
     }
 }
 
@@ -96,6 +110,10 @@ nav { line-height: 1; }
   cursor: pointer;
   transition: background 0.3s;
 
+  &:hover,
+  &:focus,
+  &:active { background-color: transparent; }
+
   span {
     display: block;
     position: absolute;
@@ -128,7 +146,7 @@ nav { line-height: 1; }
   }
 
     span {
-    	transition: transform 0.3s;
+    	transition: all 0.3s;
   	
   		&:before {
   			transform-origin: top left;
@@ -147,6 +165,7 @@ nav[data-state="open"] {
 	.cmn-toggle-switch {
 		span {
 			transform: rotate(180deg);
+       background-color: $c_white;
 
 			&:before,
 			&:after { width: 50%; }
@@ -154,11 +173,13 @@ nav[data-state="open"] {
 			&:before {
 				top: 0;
 				transform: translateX(-3px) translateY(1px) rotate(-45deg);
+        background-color: $c_white;
 			}
 
 			&:after {
 				bottom: 0;
 				transform: translateX(-3px) translateY(-1px) rotate(45deg);
+        background-color: $c_white;
 			}
 		}
 	}
@@ -168,5 +189,6 @@ nav[data-state="open"] {
 nav[data-state="open"] {
 	#site_menu {
 		transform: translateX(0);
+    left: 0;
 	}
 }

@@ -1,143 +1,119 @@
-h1, h2 { text-align: center; }
-
-#profile_photo {
-	max-width: 45rem;
-	margin: 0 auto;
+#about{
 	position: relative;
-
-	&:before {
-		content: "";
-		display: block;
-		padding-top: 100%;
-		background-image: url('https://images.unsplash.com/photo-1487309078313-fad80c3ec1e5');
-		background-repeat: no-repeat;
-		background-position: center top;
-		background-size: cover;
+	@media only screen and (min-width: $mq_medium) {
+		width: 100%;
 	}
+
+  	img {
+  		margin-bottom: 1.5rem;
+  		height: auto;
+  		width: 100%;
+  	}
+
+  	figcaption {
+  		text-align: right;
+  		font-size: 1rem;
+  		font-family: $f_oswald;
+  		font-weight: $f_normal;
+  		text-transform: uppercase;
+  	}
+
+  	figure {
+  		display: flex;
+  		flex-wrap: wrap;
+
+  		figcaption {
+  			order: -1;
+  			margin-bottom: 1rem;
+  			width: 100%;
+  			@media only screen and (min-width: $mq_medium) {
+				order: 0;
+  			}
+  		}
+
+  	}
 }
 
-#intro h1 {
-	span {
-		display: block;
-		&:last-child { font-size: 1.8rem; }
-	}
-}
-
-section {
+#bio {
+	background-color: rgba(0,0,0, 0.65);
+	padding: 1.5rem 3rem;
+	color: white;
+	width: 95%;
+	margin: -8rem auto 0 auto;
 	position: relative;
-	margin-top: 3rem;
-	padding-bottom: 3rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	z-index: 2;
 
-	&:after {
-		content: "";
-		display: block;
+
+	@media only screen and (min-width: $mq_medium) {
 		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 10rem;
-		border-bottom: 1px solid $c_ltgrey;
+		top: 58vw;
+		width: 75%;
+		left: -1rem;
 	}
 
-	&:first-child { margin-top: 0; }
-
-	p, ul {
-		max-width: 45rem;
-		margin-left: auto;
-		margin-right: auto;
+	@media only screen and (min-width: calc(#{$mq_large} + 90px)) {
+		left: -5rem;
+		width: 58%;
+		top: 50%;
 	}
 
-	ul {
-		margin-top: 1.5rem;
-		margin-bottom: 1.5rem;
-		padding-left: 1.5rem;
-	}
-}
-
-a[href*="/resume"] {
-	display: block;
-	text-align: center;
-}
-
-.social_media {
-	padding: 0;
-	margin: 3rem auto;
-	display: flex;
-	justify-content: space-around;
-	align-content: center;
-	align-items: center;
-
-	li {
-		display: inline-block;
-		width: 4.2rem;
-		height: 4.2rem;
-		flex: 0 0 4.2rem;
-		margin: 0 0.75rem;
+	h1 {
+		font-size: 8rem;
+		line-height: 0.75;
+		text-shadow: none;
+		margin: -5rem 0 2rem 0;
 	}
 
 	a {
+		text-decoration: none;
+		color: white;
+		font-weight: $f_bold;
+		font-size: 2rem;
 		position: relative;
-		display: inline-block;
-		width: 100%;
-		height: 100%;
-		border-radius: 100%;
-		border: 1px solid $c_black;
-		transition: all 150ms ease-in-out;
+		padding: 0 3px;
+	
+		&:after {
+			content: "";
+			display: block;
+			z-index: -1;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0.6rem;
+			background-color: $c_teal;
+			transition: height 175ms ease-in-out;
+		}
 
 		&:hover,
 		&:focus {
-			svg, svg path { fill: $c_white; }
+			&:after { height: 90%; }
 		}
+	}
+}
 
-		svg {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			max-width: 1.8rem;
-			transition: all 150ms ease-in-out;
-		}
+#more_bio {
+	@media only screen and (min-width: $mq_medium) {
+		margin-top: 12rem;
+		display: flex;
+		align-items: flex-start;
+	}
 
-		&[data-platform="dribbble"] {
-			&:hover,
-			&:focus {
-				border-color: #ea4c89;
-				background-color: #ea4c89;
-			}
-		}
 
-		&[data-platform="linkedin"] {
-			&:hover,
-			&:focus {
-				border-color: #0077b5;
-				background-color: #0077b5;
-			}
-		}
+	h2 {
+		font-size: 5.4rem;
+		margin: 0 0 3rem 0;
+		line-height: 1;
 
-		&[data-platform="twitter"] {
-			&:hover,
-			&:focus {
-				border-color: #1da1f2;
-				background-color: #1da1f2;
-			}
+		@media only screen and (min-width: $mq_medium) {
+			text-align: right;
+			flex: 0 1 40%;
+			min-width: 40%;
+			margin: -0.2rem 0 0 0;
 		}
+	}
 
-		&[data-platform="github"] {
-			&:hover,
-			&:focus {
-				border-color: #6e5494;
-				background-color: #6e5494;
-			}
-		}
-
-		&[data-platform="codepen"] {
-			&:hover,
-			&:focus {
-				border-color: #555555;
-				background-color: #555555;
-			}
-		}
+	@media only screen and (min-width: $mq_medium) {
+		#flex_item_wrapper { margin-left: 3rem; }
 	}
 }

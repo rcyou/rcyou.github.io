@@ -1,9 +1,10 @@
-$f_system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$f_system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-$f_muli: 'Muli', 'Helvetica Neue', sans-serif;
-$f_cousine: 'Cousine', $f_system, monospace;
-
-$f_work: 'Work Sans', 'Helvetica Neue', sans-serif;
+$f_assistant: 'Assistant', sans-serif;
+$f_marker: 'Permanent Marker', sans-serif;
+$f_oswald: 'Oswald', sans-serif;
+$f_teko: 'Teko', sans-serif;
+$f_bench: 'BenchNine', sans-serif;
 
 $c_white: #FFF;
 $c_black: #333;
@@ -11,9 +12,14 @@ $c_grey: #888;
 $c_ltgrey: #DDD;
 
 $c_red: #e01f3d;
+$c_teal: #0083a5;
 
-$_light: 300;
+$c_dribbble: #ea4c89;
+
+$f_light: 300;
 $f_normal: 400;
 $f_bold: 600;
+$f_bolder: 700;
 
-$mq_tablet: 600px;
+$mq_medium: 600px;
+$mq_large: 1000px;

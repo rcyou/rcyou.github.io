@@ -1,0 +1,33 @@
+.social_media {
+	display: block;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		line-height: 1;
+		vertical-align: middle;
+		margin-top: 0;
+	}
+
+	a {
+		display: block;
+		padding: 0 1rem;
+
+		svg {
+			max-width: 2rem;
+			max-height: 2rem;
+		}
+	}
+}
+
+#email_link {
+	display: inline-block;
+
+	svg {
+		width: 2.85rem;
+		height: 2.85rem;
+		max-width: 2.85rem;
+		max-height: 2.85rem;
+		margin-bottom: -3px;
+	}
+}
