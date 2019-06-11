@@ -119,3 +119,19 @@
 		#flex_item_wrapper { margin-left: 3rem; }
 	}
 }
+
+#work {
+	a[data-platform="dribbble"] {
+		color: $c_dribbble;
+
+		&:after {
+			background-color: #fbc7dd;
+		}
+
+		svg {
+			fill: $c_dribbble;
+			stroke-width: 0.2px;
+			stroke-color: $c_dribbble;
+		}
+	}
+}
