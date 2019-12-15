@@ -1,6 +1,5 @@
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
   margin: 0;
@@ -167,7 +166,6 @@ svg {
       height: 0.6rem;
       background-color: #0083a5;
       -webkit-transition: height 175ms ease-in-out;
-      -o-transition: height 175ms ease-in-out;
       transition: height 175ms ease-in-out; }
     .text_box a svg {
       display: inline-block;
@@ -334,14 +332,11 @@ aside *[data-visible="true"] {
 
 header {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
           align-items: flex-start;
   padding-bottom: 3rem; }
 
@@ -374,11 +369,9 @@ nav {
   height: 100vh;
   width: 100vw;
   -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
   transition: left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-  -o-transition: transform 300ms ease-in-out, left 300ms ease-in-out;
   transition: transform 300ms ease-in-out, left 300ms ease-in-out;
   transition: transform 300ms ease-in-out, left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
   background-color: rgba(0, 131, 165, 0.95);
@@ -409,13 +402,11 @@ nav {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-radius: none;
   border: none;
   cursor: pointer;
   -webkit-transition: background 0.3s;
-  -o-transition: background 0.3s;
   transition: background 0.3s; }
   .cmn-toggle-switch:hover, .cmn-toggle-switch:focus, .cmn-toggle-switch:active {
     background-color: transparent; }
@@ -443,31 +434,25 @@ nav {
       bottom: -10px; }
   .cmn-toggle-switch span {
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s; }
     .cmn-toggle-switch span:before {
       -webkit-transform-origin: top left;
-          -ms-transform-origin: top left;
               transform-origin: top left;
       -webkit-transition: width 0.3s, top 0.3s, -webkit-transform 0.3s;
       transition: width 0.3s, top 0.3s, -webkit-transform 0.3s;
-      -o-transition: transform 0.3s, width 0.3s, top 0.3s;
       transition: transform 0.3s, width 0.3s, top 0.3s;
       transition: transform 0.3s, width 0.3s, top 0.3s, -webkit-transform 0.3s; }
     .cmn-toggle-switch span:after {
       -webkit-transform-origin: bottom left;
-          -ms-transform-origin: bottom left;
               transform-origin: bottom left;
       -webkit-transition: width 0.3s, bottom 0.3s, -webkit-transform 0.3s;
       transition: width 0.3s, bottom 0.3s, -webkit-transform 0.3s;
-      -o-transition: transform 0.3s, width 0.3s, bottom 0.3s;
       transition: transform 0.3s, width 0.3s, bottom 0.3s;
       transition: transform 0.3s, width 0.3s, bottom 0.3s, -webkit-transform 0.3s; }
 
 /* active state, i.e. menu open */
 nav[data-state="open"] .cmn-toggle-switch span {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   background-color: #FFF; }
   nav[data-state="open"] .cmn-toggle-switch span:before, nav[data-state="open"] .cmn-toggle-switch span:after {
@@ -475,44 +460,35 @@ nav[data-state="open"] .cmn-toggle-switch span {
   nav[data-state="open"] .cmn-toggle-switch span:before {
     top: 0;
     -webkit-transform: translateX(-3px) translateY(1px) rotate(-45deg);
-        -ms-transform: translateX(-3px) translateY(1px) rotate(-45deg);
             transform: translateX(-3px) translateY(1px) rotate(-45deg);
     background-color: #FFF; }
   nav[data-state="open"] .cmn-toggle-switch span:after {
     bottom: 0;
     -webkit-transform: translateX(-3px) translateY(-1px) rotate(45deg);
-        -ms-transform: translateX(-3px) translateY(-1px) rotate(45deg);
             transform: translateX(-3px) translateY(-1px) rotate(45deg);
     background-color: #FFF; }
 
 nav[data-state="open"] #site_menu {
   -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
           transform: translateX(0);
   left: 0; }
 
 .grid_list {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center; }
   @media only screen and (min-width: 600px) {
     .grid_list {
       -webkit-box-pack: start;
-          -ms-flex-pack: start;
               justify-content: flex-start;
       margin: 0 -1rem; } }
   .grid_list li {
     display: inline-block;
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1rem);
             flex: 0 1 calc(50% - 1rem);
     margin: 0 1rem 2rem 1rem; }
     .grid_list li:nth-child(odd) {
@@ -522,7 +498,6 @@ nav[data-state="open"] #site_menu {
     @media only screen and (min-width: 600px) {
       .grid_list li {
         -webkit-box-flex: 0;
-            -ms-flex: 0 1 calc(33.333% - 2rem);
                 flex: 0 1 calc(33.333% - 2rem);
         padding: 0.5rem; }
         .grid_list li:nth-child(odd) {
@@ -532,7 +507,6 @@ nav[data-state="open"] #site_menu {
     @media only screen and (min-width: 1000px) {
       .grid_list li {
         -webkit-box-flex: 0;
-            -ms-flex: 0 1 calc(25% - 2rem);
                 flex: 0 1 calc(25% - 2rem); } }
   .grid_list img {
     width: 100%; }
@@ -542,13 +516,10 @@ nav[data-state="open"] #site_menu {
   @media only screen and (min-width: 600px) {
     .work_links {
       display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: center;
-          -ms-flex-pack: center;
               justify-content: center;
       -webkit-box-align: center;
-          -ms-flex-align: center;
               align-items: center;
       margin: 0 -1rem; } }
   .work_links li {
@@ -557,7 +528,6 @@ nav[data-state="open"] #site_menu {
     @media only screen and (min-width: 600px) {
       .work_links li {
         -webkit-box-flex: 1;
-            -ms-flex: 1 1 33.333%;
                 flex: 1 1 33.333%;
         padding: 0 1rem; } }
   .work_links a {
@@ -669,26 +639,20 @@ nav[data-state="open"] #site_menu {
     text-transform: uppercase; }
   #about figure {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: start;
-        -ms-flex-align: start;
             align-items: flex-start;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
             justify-content: flex-start; }
     #about figure figcaption {
       -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
               order: -1;
       margin-bottom: 1rem;
       width: 100%; }
       @media only screen and (min-width: 600px) {
         #about figure figcaption {
           -webkit-box-ordinal-group: 1;
-              -ms-flex-order: 0;
                   order: 0; } }
 
 #bio {
@@ -733,7 +697,6 @@ nav[data-state="open"] #site_menu {
       height: 0.6rem;
       background-color: #0083a5;
       -webkit-transition: height 175ms ease-in-out;
-      -o-transition: height 175ms ease-in-out;
       transition: height 175ms ease-in-out; }
     #bio a:hover:after, #bio a:focus:after {
       height: 90%; }
@@ -742,10 +705,8 @@ nav[data-state="open"] #site_menu {
   #more_bio {
     margin-top: 12rem;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
             align-items: flex-start; } }
 
 #more_bio h2 {
@@ -756,7 +717,6 @@ nav[data-state="open"] #site_menu {
     #more_bio h2 {
       text-align: right;
       -webkit-box-flex: 0;
-          -ms-flex: 0 1 40%;
               flex: 0 1 40%;
       min-width: 40%;
       margin: -0.2rem 0 0 0; } }

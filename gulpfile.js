@@ -20,7 +20,7 @@ gulp.task('sass', function() {
 	.on('error', sass.logError)
 	.pipe(sass())
 	.pipe(autoprefix({
-			browsers: ['last 5 versions', '> 1%', 'ie 8', 'ie 9', 'ie 10']
+			browserlist: ['last 5 versions', '> 1%', 'ie 8', 'ie 9', 'ie 10']
 		}))
 	.pipe(gulp.dest('css/'))
 	// load new CSS files in browser when task runs

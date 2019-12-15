@@ -1,6 +1,5 @@
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
   margin: 0;
@@ -167,7 +166,6 @@ svg {
       height: 0.6rem;
       background-color: #0083a5;
       -webkit-transition: height 175ms ease-in-out;
-      -o-transition: height 175ms ease-in-out;
       transition: height 175ms ease-in-out; }
     .text_box a svg {
       display: inline-block;
@@ -334,14 +332,11 @@ aside *[data-visible="true"] {
 
 header {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
           align-items: flex-start;
   padding-bottom: 3rem; }
 
@@ -374,11 +369,9 @@ nav {
   height: 100vh;
   width: 100vw;
   -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
   transition: left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-  -o-transition: transform 300ms ease-in-out, left 300ms ease-in-out;
   transition: transform 300ms ease-in-out, left 300ms ease-in-out;
   transition: transform 300ms ease-in-out, left 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
   background-color: rgba(0, 131, 165, 0.95);
@@ -409,13 +402,11 @@ nav {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-radius: none;
   border: none;
   cursor: pointer;
   -webkit-transition: background 0.3s;
-  -o-transition: background 0.3s;
   transition: background 0.3s; }
   .cmn-toggle-switch:hover, .cmn-toggle-switch:focus, .cmn-toggle-switch:active {
     background-color: transparent; }
@@ -443,31 +434,25 @@ nav {
       bottom: -10px; }
   .cmn-toggle-switch span {
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s; }
     .cmn-toggle-switch span:before {
       -webkit-transform-origin: top left;
-          -ms-transform-origin: top left;
               transform-origin: top left;
       -webkit-transition: width 0.3s, top 0.3s, -webkit-transform 0.3s;
       transition: width 0.3s, top 0.3s, -webkit-transform 0.3s;
-      -o-transition: transform 0.3s, width 0.3s, top 0.3s;
       transition: transform 0.3s, width 0.3s, top 0.3s;
       transition: transform 0.3s, width 0.3s, top 0.3s, -webkit-transform 0.3s; }
     .cmn-toggle-switch span:after {
       -webkit-transform-origin: bottom left;
-          -ms-transform-origin: bottom left;
               transform-origin: bottom left;
       -webkit-transition: width 0.3s, bottom 0.3s, -webkit-transform 0.3s;
       transition: width 0.3s, bottom 0.3s, -webkit-transform 0.3s;
-      -o-transition: transform 0.3s, width 0.3s, bottom 0.3s;
       transition: transform 0.3s, width 0.3s, bottom 0.3s;
       transition: transform 0.3s, width 0.3s, bottom 0.3s, -webkit-transform 0.3s; }
 
 /* active state, i.e. menu open */
 nav[data-state="open"] .cmn-toggle-switch span {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   background-color: #FFF; }
   nav[data-state="open"] .cmn-toggle-switch span:before, nav[data-state="open"] .cmn-toggle-switch span:after {
@@ -475,19 +460,16 @@ nav[data-state="open"] .cmn-toggle-switch span {
   nav[data-state="open"] .cmn-toggle-switch span:before {
     top: 0;
     -webkit-transform: translateX(-3px) translateY(1px) rotate(-45deg);
-        -ms-transform: translateX(-3px) translateY(1px) rotate(-45deg);
             transform: translateX(-3px) translateY(1px) rotate(-45deg);
     background-color: #FFF; }
   nav[data-state="open"] .cmn-toggle-switch span:after {
     bottom: 0;
     -webkit-transform: translateX(-3px) translateY(-1px) rotate(45deg);
-        -ms-transform: translateX(-3px) translateY(-1px) rotate(45deg);
             transform: translateX(-3px) translateY(-1px) rotate(45deg);
     background-color: #FFF; }
 
 nav[data-state="open"] #site_menu {
   -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
           transform: translateX(0);
   left: 0; }
 
@@ -498,17 +480,14 @@ nav[data-state="open"] #site_menu {
   @media only screen and (min-width: 8.5in) {
     #content_wrapper {
       display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
+      flex-wrap: wrap; } }
 
 #page_top {
   padding: 0 1.5rem; }
   @media only screen and (min-width: 8.5in) {
     #page_top {
       -webkit-box-flex: 1;
-          -ms-flex: 1 1 100%;
               flex: 1 1 100%; } }
   #page_top h1 {
     text-align: left; }
@@ -521,7 +500,6 @@ nav[data-state="open"] #site_menu {
 @media only screen and (min-width: 8.5in) {
   main {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.6666%;
             flex: 0 0 66.6666%;
     padding-right: 0.25in; }
     main section {
@@ -530,7 +508,6 @@ nav[data-state="open"] #site_menu {
 @media only screen and (min-width: 8.5in) {
   aside {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.33%;
             flex: 0 0 33.33%; }
     aside > div {
       padding: 0; } }
@@ -588,17 +565,14 @@ address,
 #work_experience article,
 #education article {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 3rem; }
   #work_experience article .date_timespan,
   #education article .date_timespan {
     -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
             order: -1; }
 
 .subtext {
