@@ -3,135 +3,109 @@
 	@media only screen and (min-width: $mq_medium) {
 		width: 100%;
 	}
-
-  	img {
-  		margin-bottom: 1.5rem;
-  		height: auto;
-  		width: 100%;
-  	}
-
-  	figcaption {
-  		text-align: right;
-  		font-size: 1rem;
-  		font-family: $f_oswald;
-  		font-weight: $f_normal;
-  		text-transform: uppercase;
-  	}
-
-  	figure {
-  		display: flex;
-  		flex-wrap: wrap;
-  		align-items: flex-start;
-  		justify-content: flex-start;
-
-  		figcaption {
-  			order: -1;
-  			margin-bottom: 1rem;
-  			width: 100%;
-  			@media only screen and (min-width: $mq_medium) {
-				order: 0;
-  			}
-  		}
-
-  	}
 }
 
 #bio {
-	background-color: rgba(0,0,0, 0.65);
-	padding: 1.5rem 3rem;
-	color: white;
-	width: 95%;
-	margin: -8rem auto 0 auto;
+	padding: 1.5rem 0;
+	margin: 0 auto;
 	position: relative;
 	z-index: 2;
 
 
 	@media only screen and (min-width: $mq_medium) {
-		position: absolute;
-		top: 58vw;
-		width: 75%;
-		left: -1rem;
+
 	}
 
 	@media only screen and (min-width: calc(#{$mq_large} + 90px)) {
-		left: -5rem;
-		width: 58%;
-		top: 50%;
+	
 	}
 
 	h1 {
-		font-size: 8rem;
-		line-height: 0.75;
-		text-shadow: none;
-		margin: -5rem 0 2rem 0;
+		margin: 2rem 0;
 	}
 
 	a {
 		text-decoration: none;
-		color: white;
 		font-weight: $f_bold;
 		font-size: 2rem;
 		position: relative;
 		padding: 0 3px;
+	}
+}
+
+#work_list {
+	list-style: none;
+	column-count: 1;
+	column-gap: 1rem;
+	column-width: 100%;
+	column-break-inside : avoid;
+	padding: 1rem;
+	margin: 6rem 0 0 0;
 	
-		&:after {
+	@media only screen and (min-width: $mq_medium) {
+		column-width: 50%;
+		column-count: 2;
+	}
+	
+	@media only screen and (min-width: calc(#{$mq_large} + 90px)) {
+		column-width: 33.3333%;
+		column-count: 3;
+	}
+
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 0 1rem 0;
+		background: red;
+		border-radius: 8px;
+	}
+}
+
+#work_logos {
+	margin: 12rem 0;
+	@media only screen and (min-width: $mq_medium) {
+		display: flex;
+	}
+}
+
+#logos_list {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0 3rem 0 0;
+	flex: 0 0 50%;
+
+	@media only screen and (min-width: $mq_medium) {
+		width: 50%;
+	}
+
+	li {
+		flex: 0 0 calc(33.333% - 3rem);
+		margin: 1rem;
+		width: calc(33.333% - 3rem);
+		position: relative;
+
+		&:before {
 			content: "";
 			display: block;
-			z-index: -1;
 			position: absolute;
-			bottom: 0;
-			left: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			height: 100%;
 			width: 100%;
-			height: 0.6rem;
-			background-color: $c_teal;
-			transition: height 175ms ease-in-out;
+			background-color: aliceblue;
+			z-index: 2;
+			mix-blend-mode: color;
 		}
 
-		&:hover,
-		&:focus {
-			&:after { height: 90%; }
-		}
-	}
-}
-
-#more_bio {
-	@media only screen and (min-width: $mq_medium) {
-		margin-top: 12rem;
-		display: flex;
-		align-items: flex-start;
-	}
-
-
-	h2 {
-		font-size: 5.4rem;
-		margin: 0 0 3rem 0;
-		line-height: 1;
-
-		@media only screen and (min-width: $mq_medium) {
-			text-align: right;
-			flex: 0 1 40%;
-			min-width: 40%;
-			margin: -0.2rem 0 0 0;
-		}
-	}
-
-	@media only screen and (min-width: $mq_medium) {
-		#flex_item_wrapper { margin-left: 3rem; }
-	}
-}
-
-#work {
-	a[data-platform="dribbble"] {
-		color: $c_dribbble;
-
-		&:after {
-			background-color: #fbc7dd;
-		}
-
-		svg {
-			fill: $c_dribbble;
-			stroke-width: 0.2px;
-			stroke-color: $c_dribbble;
+		img {
+			position: relative;
+			
 		}
 	}
 }

@@ -7,7 +7,7 @@ html {
 body {
 	min-height: 100%;
 	font-size: 1.8rem;
-	font-family: $f_assistant;
+	font-family: $f_system;
 	line-height: 1.625;
 	font-weight: $f_normal;
 	background-color: $c_white;
@@ -28,27 +28,26 @@ img {
 h1, h2, h3,
 h4, h5, h6 {
 	font-weight: $f_normal;
-}
-
-h1 {
-	font-size: 4.2rem;
-	font-family: $f_marker;
-	width: 100%;
-	line-height: 1.125;
 	margin-bottom: 1.5rem;
 }
 
+h1 {
+	font-size: 3.8rem;
+	width: 100%;
+	line-height: 1.125;
+	margin-bottom: 1.5rem;
+	font-family: $f_marker;
+}
+
 h2 {
-	font-size: 2.6rem;
-	font-family: $f_oswald;
-	font-weight: $f_bold;
+	font-size: 3rem;
+	font-family: $f_marker;
 	text-transform: uppercase;
 	line-height: 1.125;
 }
 
 h3 {
 	font-size: 2.1rem;
-	font-family: $f_oswald;
 	font-weight: $f_normal;
 	text-transform: uppercase;
 	line-height: 1.125;

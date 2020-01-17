@@ -89,4 +89,11 @@ function domReady () {
   //   forEachVisibleItem(page_sections);
   //   forEachVisibleItem(aside_sections);
   // }, false);
+
+  $('[data-fancybox="gallery"]').fancybox({
+    buttons: [
+      "close",
+    ],
+    infobar: false,
+  });
 }
