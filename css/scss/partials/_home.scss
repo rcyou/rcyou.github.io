@@ -9,6 +9,7 @@
 	padding: 1.5rem 0;
 	margin: 0 auto;
 	position: relative;
+	text-align: center;
 	z-index: 2;
 
 
@@ -105,5 +106,47 @@
 			position: relative;
 			
 		}
+	}
+}
+
+#testimonials {
+	padding: 6rem 0;
+	border-top: 1px solid $c_ltgrey;
+	border-bottom: 1px solid $c_ltgrey;
+
+	h2 { margin-bottom: 6rem; }
+}
+
+.testimonial {
+	display: flex;
+	align-items: center;
+
+	&:nth-of-type(even) {
+		flex-direction: row-reverse;
+		margin-top: 6rem;
+
+		img {
+			margin-right: 0;
+			margin-left: 3rem;
+		 }
+	}
+
+	img {
+		border-radius: 100%;
+		height: 15rem;
+		width: 15rem;
+		margin-right: 3rem;
+	}
+
+	.testimonial_text {
+		font-size: 2.1rem;
+		font-style: italic;
+		line-height: 1.25;
+	}
+
+	.credit {
+		text-align: right;
+		font-size: 1.6rem;
+		font-style: normal;
 	}
 }
