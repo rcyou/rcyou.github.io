@@ -7,7 +7,7 @@ html {
 body {
 	min-height: 100%;
 	font-size: 1.8rem;
-	font-family: $f_system;
+	font-family: $f_roboto, $f_system;
 	line-height: 1.625;
 	font-weight: $f_normal;
 	background-color: $c_white;
@@ -35,8 +35,9 @@ h1 {
 	font-size: 3.8rem;
 	width: 100%;
 	line-height: 1.125;
-	margin-bottom: 1.5rem;
+	margin: 1.5rem 0;
 	font-family: $f_marker;
+	text-align: center;
 }
 
 h2 {

@@ -6,19 +6,27 @@
 }
 
 #bio {
-	padding: 1.5rem 0;
+	padding: 0;
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
 	z-index: 2;
+	font-size: 2.4rem;
+	font-weight: $f_light;
 
-	h1 {
-		margin: 2rem 0;
+	p {
+		margin: 3rem 0;
+
+		&:first-of-type { margin-top: 0; }
+
+		&:last-of-type {
+			font-size: 1.8rem;
+		}
 	}
 
 	a {
 		text-decoration: none;
-		font-weight: $f_bold;
+		font-weight: $f_bolder;
 		font-size: 2rem;
 		position: relative;
 		padding: 0 3px;
@@ -123,9 +131,14 @@
 
 	h2 {
 		margin-bottom: 3rem;
+		text-align: center;
 
 		@media only screen and (min-width: $mq_medium) {
 			margin-bottom: 6rem;
+		}
+
+		@media only screen and (min-width: $mq_large) {
+			text-align: left;
 		}
 	}
 }
@@ -145,12 +158,14 @@
 	.testimonial_text {
 		font-size: 2.1rem;
 		font-style: italic;
-		line-height: 1.25;
+		line-height: 1.325;
+		font-weight: $f_light;
 	}
 
 	.credit {
 		font-size: 1.6rem;
 		font-style: normal;
+		font-weight: $f_bolder;
 	}
 
 	@media only screen and (min-width: $mq_medium) {
