@@ -57,29 +57,29 @@ var getOutboundLink = function(url) {
   });
 }
 
-var menu_toggle = document.getElementById('menu_toggle');
-var navigation = menu_toggle.parentNode;
-var site_menu = document.getElementById('site_menu');
+// var menu_toggle = document.getElementById('menu_toggle');
+// var navigation = menu_toggle.parentNode;
+// var site_menu = document.getElementById('site_menu');
 
-function toggle_menu() {
-	menu_toggle.addEventListener('click', function () {
-		if (navigation.getAttribute('data-state') == 'open') {
-			navigation.setAttribute('data-state', 'closed');
-			site_menu.setAttribute('aria-hidden', 'true');
-		} else {
-			navigation.setAttribute('data-state', 'open');
-			site_menu.setAttribute('aria-hidden', 'false');
-		}
-	});
-}
+// function toggle_menu() {
+// 	menu_toggle.addEventListener('click', function () {
+// 		if (navigation.getAttribute('data-state') == 'open') {
+// 			navigation.setAttribute('data-state', 'closed');
+// 			site_menu.setAttribute('aria-hidden', 'true');
+// 		} else {
+// 			navigation.setAttribute('data-state', 'open');
+// 			site_menu.setAttribute('aria-hidden', 'false');
+// 		}
+// 	});
+// }
 
 function domReady () {
   document.body.className += " javascript";
   // trackOutboundLink();
-  toggle_menu();
+  // toggle_menu();
 
-  var page_sections = document.querySelectorAll('main > section'), i;
-  var aside_sections = document.querySelectorAll('aside > div'), i;
+  // var page_sections = document.querySelectorAll('main > section'), i;
+  // var aside_sections = document.querySelectorAll('aside > div'), i;
 
   // might use this later but not right now ...
   // forEachVisibleItem(page_sections);
@@ -94,6 +94,6 @@ function domReady () {
     buttons: [
       "close",
     ],
-    infobar: false,
+    infobar: false
   });
 }

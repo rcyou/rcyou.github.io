@@ -60,10 +60,12 @@
 }
 
 #work_logos {
-	margin: 12rem 0;
+	margin: 6rem 0;
+
 	@media only screen and (min-width: $mq_medium) {
 		display: flex;
 		flex-direction: row-reverse;
+		margin: 12rem 0;
 	}
 }
 
@@ -74,19 +76,26 @@
 	align-items: center;
 	list-style: none;
 	padding: 0;
-	margin: 0 3rem 0 0;
-	flex: 0 0 50%;
+	margin: 0;
 
 	@media only screen and (min-width: $mq_medium) {
 		width: 50%;
+		margin: 0 3rem 0 0;
+		flex: 0 0 50%;
 	}
 
 	li {
-		flex: 0 0 calc(33.333% - 3rem);
-		margin: 1rem;
-		width: calc(33.333% - 3rem);
+		flex: 0 0 calc(33.333% - 1.5rem);
+		margin: 0.75rem;
+		width: calc(33.333% - 1.5rem);
 		position: relative;
 		opacity: 0.65;
+
+		@media only screen and (min-width: $mq_medium) {
+			flex: 0 0 calc(33.333% - 3rem);
+			margin: 1rem;
+			width: calc(33.333% - 3rem);
+		}
 
 		&:before {
 			content: "";
@@ -113,29 +122,31 @@
 	padding: 6rem 0;
 	border-top: 1px solid $c_ltgrey;
 	border-bottom: 1px solid $c_ltgrey;
+	text-align: center;
 
-	h2 { margin-bottom: 6rem; }
+	@media only screen and (min-width: $mq_medium) {
+		text-align: left;
+	}
+
+	h2 {
+		margin-bottom: 3rem;
+
+		@media only screen and (min-width: $mq_medium) {
+			margin-bottom: 6rem;
+		}
+	}
 }
 
 .testimonial {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-
-	&:nth-of-type(even) {
-		flex-direction: row-reverse;
-		margin-top: 6rem;
-
-		img {
-			margin-right: 0;
-			margin-left: 3rem;
-		 }
-	}
 
 	img {
 		border-radius: 100%;
 		height: 15rem;
 		width: 15rem;
-		margin-right: 3rem;
+		margin: 0 0 3rem 0;
 	}
 
 	.testimonial_text {
@@ -145,8 +156,29 @@
 	}
 
 	.credit {
-		text-align: right;
 		font-size: 1.6rem;
 		font-style: normal;
+	}
+
+	@media only screen and (min-width: $mq_medium) {
+		flex-direction: row;
+
+		&:nth-of-type(even) {
+			flex-direction: row-reverse;
+			margin-top: 6rem;
+
+			img {
+				margin-right: 0;
+				margin-left: 3rem;
+			 }
+		}
+
+		img {
+			margin: 0 3rem 0 0;
+		}
+
+		.credit {
+			text-align: right;
+		}
 	}
 }
