@@ -594,7 +594,8 @@ nav[data-state="open"] #site_menu {
     border-radius: 8px; }
 
 #work_logos {
-  margin: 6rem 0; }
+  margin: 6rem 0;
+  text-align: center; }
   @media only screen and (min-width: 600px) {
     #work_logos {
       display: -webkit-box;
@@ -602,7 +603,8 @@ nav[data-state="open"] #site_menu {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
               flex-direction: row-reverse;
-      margin: 12rem 0; } }
+      margin: 12rem 0;
+      text-align: left; } }
 
 #logos_list {
   display: -webkit-box;

@@ -12,15 +12,6 @@
 	text-align: center;
 	z-index: 2;
 
-
-	@media only screen and (min-width: $mq_medium) {
-
-	}
-
-	@media only screen and (min-width: calc(#{$mq_large} + 90px)) {
-	
-	}
-
 	h1 {
 		margin: 2rem 0;
 	}
@@ -61,11 +52,13 @@
 
 #work_logos {
 	margin: 6rem 0;
+	text-align: center;
 
 	@media only screen and (min-width: $mq_medium) {
 		display: flex;
 		flex-direction: row-reverse;
 		margin: 12rem 0;
+		text-align: left;
 	}
 }
 
