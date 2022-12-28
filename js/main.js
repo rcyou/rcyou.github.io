@@ -39,7 +39,13 @@ var isInViewport = function (elem) {
 function forEachVisibleItem(nodeList) {
   for (i = 0; i < nodeList.length; ++i) {
     if (isInViewport(nodeList[i]) && !nodeList[i].hasAttribute("data-visible")) {
-      nodeList[i].setAttribute("data-visible", "true"); 
+      nodeList[i].setAttribute("data-visible", "true");
+
+      gtag('event', 'scroll', {
+        'event_category': 'viewed',
+        'event_label': nodeList[i].id,
+        'transport_type': 'beacon'
+      });
     }
   }
 }
@@ -78,17 +84,23 @@ function domReady () {
   // trackOutboundLink();
   // toggle_menu();
 
-  // var page_sections = document.querySelectorAll('main > section'), i;
-  // var aside_sections = document.querySelectorAll('aside > div'), i;
+  var page_sections = document.querySelectorAll('main > section'), i;
 
-  // might use this later but not right now ...
-  // forEachVisibleItem(page_sections);
-  // forEachVisibleItem(aside_sections);
+  forEachVisibleItem(page_sections);
 
-  // window.addEventListener('scroll', function (event) {
-  //   forEachVisibleItem(page_sections);
-  //   forEachVisibleItem(aside_sections);
-  // }, false);
+  window.addEventListener('scroll', function (event) {
+    forEachVisibleItem(page_sections);
+  }, false);
+
+  document.querySelectorAll('#work_list > li > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      gtag('event', 'click', {
+        'event_category': 'viewed',
+        'event_label': link.id,
+        'transport_type': 'beacon'
+      });
+    });
+  });
 
   $('[data-fancybox="gallery"]').fancybox({
     buttons: [
