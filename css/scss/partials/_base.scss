@@ -191,6 +191,19 @@ animation: 800ms ease slide-from-bottom both;
 & + & { animation-delay: 0; }
 }
 
+#work_links[data-visible="true"] #work_list {
+	li {
+		@for $i from 1 through 20 {
+			&:nth-child(#{$i}n) {
+				animation-delay: #{$i * 80}ms;
+				z-index: #{$i * 0.25};
+			}
+		}
+
+		animation: 800ms ease slide-from-bottom both;
+	}
+}
+
 // ANIMATION
 @keyframes slide-from-left {
 	0% {

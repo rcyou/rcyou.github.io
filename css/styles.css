@@ -270,6 +270,90 @@ aside *[data-visible="true"] {
     -webkit-animation-delay: 0;
             animation-delay: 0; }
 
+#work_links[data-visible="true"] #work_list li {
+  -webkit-animation: 800ms ease slide-from-bottom both;
+          animation: 800ms ease slide-from-bottom both; }
+  #work_links[data-visible="true"] #work_list li:nth-child(1n) {
+    -webkit-animation-delay: 80ms;
+            animation-delay: 80ms;
+    z-index: 0.25; }
+  #work_links[data-visible="true"] #work_list li:nth-child(2n) {
+    -webkit-animation-delay: 160ms;
+            animation-delay: 160ms;
+    z-index: 0.5; }
+  #work_links[data-visible="true"] #work_list li:nth-child(3n) {
+    -webkit-animation-delay: 240ms;
+            animation-delay: 240ms;
+    z-index: 0.75; }
+  #work_links[data-visible="true"] #work_list li:nth-child(4n) {
+    -webkit-animation-delay: 320ms;
+            animation-delay: 320ms;
+    z-index: 1; }
+  #work_links[data-visible="true"] #work_list li:nth-child(5n) {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+    z-index: 1.25; }
+  #work_links[data-visible="true"] #work_list li:nth-child(6n) {
+    -webkit-animation-delay: 480ms;
+            animation-delay: 480ms;
+    z-index: 1.5; }
+  #work_links[data-visible="true"] #work_list li:nth-child(7n) {
+    -webkit-animation-delay: 560ms;
+            animation-delay: 560ms;
+    z-index: 1.75; }
+  #work_links[data-visible="true"] #work_list li:nth-child(8n) {
+    -webkit-animation-delay: 640ms;
+            animation-delay: 640ms;
+    z-index: 2; }
+  #work_links[data-visible="true"] #work_list li:nth-child(9n) {
+    -webkit-animation-delay: 720ms;
+            animation-delay: 720ms;
+    z-index: 2.25; }
+  #work_links[data-visible="true"] #work_list li:nth-child(10n) {
+    -webkit-animation-delay: 800ms;
+            animation-delay: 800ms;
+    z-index: 2.5; }
+  #work_links[data-visible="true"] #work_list li:nth-child(11n) {
+    -webkit-animation-delay: 880ms;
+            animation-delay: 880ms;
+    z-index: 2.75; }
+  #work_links[data-visible="true"] #work_list li:nth-child(12n) {
+    -webkit-animation-delay: 960ms;
+            animation-delay: 960ms;
+    z-index: 3; }
+  #work_links[data-visible="true"] #work_list li:nth-child(13n) {
+    -webkit-animation-delay: 1040ms;
+            animation-delay: 1040ms;
+    z-index: 3.25; }
+  #work_links[data-visible="true"] #work_list li:nth-child(14n) {
+    -webkit-animation-delay: 1120ms;
+            animation-delay: 1120ms;
+    z-index: 3.5; }
+  #work_links[data-visible="true"] #work_list li:nth-child(15n) {
+    -webkit-animation-delay: 1200ms;
+            animation-delay: 1200ms;
+    z-index: 3.75; }
+  #work_links[data-visible="true"] #work_list li:nth-child(16n) {
+    -webkit-animation-delay: 1280ms;
+            animation-delay: 1280ms;
+    z-index: 4; }
+  #work_links[data-visible="true"] #work_list li:nth-child(17n) {
+    -webkit-animation-delay: 1360ms;
+            animation-delay: 1360ms;
+    z-index: 4.25; }
+  #work_links[data-visible="true"] #work_list li:nth-child(18n) {
+    -webkit-animation-delay: 1440ms;
+            animation-delay: 1440ms;
+    z-index: 4.5; }
+  #work_links[data-visible="true"] #work_list li:nth-child(19n) {
+    -webkit-animation-delay: 1520ms;
+            animation-delay: 1520ms;
+    z-index: 4.75; }
+  #work_links[data-visible="true"] #work_list li:nth-child(20n) {
+    -webkit-animation-delay: 1600ms;
+            animation-delay: 1600ms;
+    z-index: 5; }
+
 @-webkit-keyframes slide-from-left {
   0% {
     opacity: 0;
