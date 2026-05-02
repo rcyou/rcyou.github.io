@@ -1,0 +1,12 @@
+<section id="work_links" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading" class="visually-hidden">Illustration Gallery</h2>
+    <ul id="work_list" role="list">
+        {% for item in illustrations %}
+        <li>
+            <a data-fancybox="gallery" href="{{ item.src }}" aria-label="View larger version of {{ item.alt }}">
+                <img alt="{{ item.alt }}" src="{{ item.src }}" loading="lazy">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

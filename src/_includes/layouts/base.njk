@@ -1,0 +1,28 @@
+---
+seoTitle: Make meta titles 50 characters long to avoid truncation
+metaDescription: Make sure you add a meta description for your page
+date: Last Modified
+---
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    {% include "partials/analytics.njk" %}
+    {% include "partials/meta.njk" %}
+</head>
+<body>
+    {% include "partials/svg-symbols.njk" %}
+
+    <div id="page">
+        {% include "partials/site-header.njk" %}
+        
+        <main>
+            {{ content | safe }}
+        </main>
+
+        {% include "partials/footer.njk" %}
+    </div>
+
+    <script src="js/main.js"></script>
+    {% include "partials/scripts.njk" %}
+</body>
+</html>

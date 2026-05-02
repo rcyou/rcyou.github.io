@@ -1,0 +1,14 @@
+<section id="work_logos" aria-labelledby="logos-heading">
+    <div>
+        <h2 id="logos-heading">Logos</h2>
+        <p>I've made logos for a variety of businesses and orginizations throughout my career. Some for startups. Some for nonprofits. Some just for fun.</p>
+        <p>Logos are one of my favorite types of projects because I get to do a lot of thumbnail sketching early, cranking out ideas and seeing how they evolve.</p>
+    </div>
+    <ul id="logos_list" role="list">
+       {% for logo in logos %}
+        <li>
+            <img src="{{ logo.src }}" alt="{{ logo.alt }}" loading="lazy">
+        </li>
+        {% endfor %}
+    </ul>
+</section>

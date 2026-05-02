@@ -1,26 +1,26 @@
 {
-  "name": "personal_site",
+  "name": "rcyou.github.io",
   "version": "1.0.0",
-  "description": "node files for personal site",
+  "description": "A new personal site for 2017. Just a basic one-pager with a short bio plus links to blog posts I've written and social media platforms I'm active on.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rcyou/rcyou.github.io.git"
   },
-  "author": "Ryan Young",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/rcyou/rcyou.github.io/issues"
   },
   "homepage": "https://github.com/rcyou/rcyou.github.io#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-file-include": "^2.2.2",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1"
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "sass": "^1.99.0"
   }
 }
